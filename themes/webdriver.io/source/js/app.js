@@ -1,35 +1,37 @@
 var App = function() {
 
     this.ui = {
-        window: $('html,body'),
-        body: $('body'),
-        gists: $('.gists > div')
+        body: $(document.body),
+        apinav: $('.apinav')
     };
 
     this.events = {
-        'click .links>a': 'scrollToCommand',
-        'click .gist-header>button': 'openGist'
+        'click .apinav>h3>a': 'openCommandList'
     };
 
     this.delegateEvents();
 };
 
-App.prototype.scrollToCommand = function(e) {
+App.prototype.openCommandList = function(e) {
     e.preventDefault();
 
     var elem = $(e.target),
-        target = $('#' + elem.attr('href').slice(1));
+        category = elem.data('open'),
+        commandList = $('.commands.' + category);
 
-    if (target.length) {
-        var targetOffset = target.offset().top - 30;
-        this.ui.window.animate({scrollTop: targetOffset}, 1000, 'easeOutExpo');
-        return false;
+    console.log(elem);
+    window.test = elem;
+
+    if(commandList.is(':visible')) {
+        elem.toggleClass('active');
+        return $('.commands.' + category).slideUp();
     }
-};
 
-App.prototype.openGist = function(e) {
-    this.ui.gists.filter('.show').removeClass('show');
-    this.ui.gists.filter('.' + $(e.target).data('gist')).addClass('show');
+    $('.commands:visible').removeClass('active').slideUp();
+    $('.commands.' + category).slideToggle();
+
+    this.ui.apinav.find('h3 a').removeClass('active');
+    elem.addClass('active');
 };
 
 /**
@@ -38,8 +40,6 @@ App.prototype.openGist = function(e) {
  * https://github.com/jashkenas/backbone/blob/master/backbone.js#L1062
  */
 App.prototype.delegateEvents = function() {
-
-    'use strict';
 
     var i = 0;
     for (var key in this.events) {
@@ -56,13 +56,9 @@ App.prototype.delegateEvents = function() {
 
         ++i;
     }
+
 };
 
 $(function() {
     new App();
 });
-
-jQuery.extend( jQuery.easing, { easeOutExpo: function (x, t, b, c, d) {
-    if ((t/=d/2) < 1) return -c/2 * (Math.sqrt(1 - t*t) - 1) + b;
-    return c/2 * (Math.sqrt(1 - (t-=2)*t) + 1) + b;
-}});

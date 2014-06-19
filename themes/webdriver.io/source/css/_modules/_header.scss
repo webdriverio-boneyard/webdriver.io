@@ -2,26 +2,16 @@ header {
     text-align: center;
     margin: 70px 0;
 
-    h1 {
-        font-size: $headerLogoFontSize;
-        color: $black;
-        text-transform: uppercase;
-        font-weight: 100;
-        letter-spacing: 0.03em;
-        line-height: 0.92em;
-        padding: 30px 0 0;
-
-        span {
-            letter-spacing: -2px;
-            background: $orange;
-            border-radius: 10px;
-            color: white;
-            font-size: 0.60em;
-            position: relative;
-            bottom: 11px;
-            padding: 0 5px 0 3px;
-            left: 10px;
-        }
+    h1 span {
+        letter-spacing: -2px;
+        background: $orange;
+        border-radius: 10px;
+        color: white;
+        font-size: 0.60em;
+        position: relative;
+        bottom: 11px;
+        padding: 0 5px 0 3px;
+        left: 10px;
     }
 
     h2 {

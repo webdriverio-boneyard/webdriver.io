@@ -1,0 +1,62 @@
+.api {
+    background: $white;
+    border-radius: 5px;
+    padding: 15px;
+    overflow: hidden;
+
+    .doc {
+        margin-top: 20px;
+        float: left;
+        width: 74%;
+        padding-left: 20px;
+        border-left: 1px solid $highlight-border;
+        position: relative;
+        right: 1px;
+
+        .btn {
+            color: white;
+            background: #ea5906;
+            padding: 5px 10px;
+            border-radius: 5px;
+            text-decoration: none;
+            float: right;
+            margin-bottom: 15px;
+
+            &.improve {
+                margin-right: 20px;
+            }
+            &:before {
+                margin-right: 5px;
+            }
+        }
+
+        >table {
+            width: 100%;
+            border: 1px solid $highlight-border;
+            margin-bottom: 30px;
+
+            thead {
+                background: #f1f1f1;
+                
+                th {
+                    padding: 10px;
+                    font-weight: bold;
+                }
+            }
+
+            tbody {
+                border-top: #eee;
+
+                td {
+                    padding: 10px;
+                    font-weight: 300;
+                }
+            }
+
+            td + td,
+            th + th {
+                border-left: 1px solid #eee;
+            }
+        }
+    }
+}

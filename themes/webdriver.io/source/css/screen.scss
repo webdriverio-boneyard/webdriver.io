@@ -26,9 +26,9 @@
 @import "_modules/social";
 @import "_modules/footer";
 @import "_modules/teaser";
-@import "_modules/commandList";
+@import "_modules/api";
 @import "_modules/responsive";
-@import "_modules/mainnavigation";
+@import "_modules/nav";
 
 // general styles
 html,body {
@@ -70,6 +70,16 @@ p {
     padding: 10px 0;
     overflow: hidden;
     font-weight: 300;
+}
+
+code {
+    font-family: $fontCode;
+    margin: 0;
+    border: 1px solid $highlight-border;
+    background-color: $highlight-background;
+    border-radius: 3px;
+    padding: 2px;
+    font-size: 12px;
 }
 
 [class*="icon-"]:before,
