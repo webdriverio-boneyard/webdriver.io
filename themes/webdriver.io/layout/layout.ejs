@@ -1,4 +1,11 @@
-<!DOCTYPE html>
-<html>
-  <body><%- body %></body>
-</html>
+<%- partial('_partial/head') %>
+<%- partial('_partial/navi') %>
+
+<section class="content">
+    <div class="container">
+        <%- body %>
+    </div>
+</section>
+
+<%- partial('_partial/footer') %>
+<%- partial('_partial/scripts') %>

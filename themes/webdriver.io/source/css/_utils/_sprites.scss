@@ -1,0 +1,4 @@
+$sprite-spacing: 0px;
+$sprite-sprite-dimensions: true;
+@import "sprite/*.png";
+@include all-sprite-sprites;

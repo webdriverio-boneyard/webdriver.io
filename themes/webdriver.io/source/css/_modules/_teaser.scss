@@ -1,0 +1,59 @@
+.teaser {
+    clear: both;
+    padding-bottom: 70px;
+    overflow: hidden;
+
+    .teaserbox {
+        @include border-radius(50%);
+        width: 280px;
+        height: 280px;
+        float: left;
+        background: $white;
+        margin-right: 60px;
+        text-align: center;
+        overflow: hidden;
+        position: relative;
+
+        &:before {
+            content: "";
+            width: 100%;
+            height: 100%;
+            position:absolute;
+            left:0;
+            top:0;
+            background: url('/images/teaser-icons.gif') 70px 150px $white no-repeat;
+            z-index: 0;
+        }
+
+        &:last-child {
+            margin: 0;
+        }
+
+        &:nth-child(2):before {
+            background-position: -155px 170px;
+        }
+
+        &:nth-child(3):before {
+            background-position: -382px 180px;
+        }
+
+        h3 {
+            font-size: 20px;
+            font-weight: bold;
+            margin: 40px 0 15px;
+            position: relative;
+        }
+
+        p {
+            font-weight: 300;
+            position: relative;
+            z-index: 2;
+            width: 80%;
+            padding: 0 10%;
+        }
+
+        strong {
+            font-weight: bold;
+        }
+    }
+}

@@ -5,7 +5,7 @@
 # Site
 title: Webdriver.io
 subtitle: Selenium 2.0 bindings for NodeJS
-description:
+description: A nodejs bindings implementation for selenium 2.0/webdriver.
 author: Christian Bromann
 email: mail@christian-bromann.com
 language: en-EN
@@ -24,6 +24,14 @@ code_dir: code
 source_dir: source
 public_dir: public
 
+# FB open graph
+og:
+    image: http://webdriver.io/images/webdriver-robot-with-dots.png
+    title: WebdriverIO - Selenium 2.0 bindings for NodeJS
+    url:   http://webdriver.io
+    description: A nodejs bindings implementation for selenium 2.0/webdriver.
+    type:  website
+
 # Writing
 new_post_name: :title.md # File name of new posts
 default_layout: post
@@ -37,9 +45,9 @@ render_drafts: false
 post_asset_folder: false
 relative_link: false
 highlight:
-  enable: true
-  line_number: true
-  tab_replace:
+    enable: true
+    line_number: true
+    tab_replace:
 
 # Category & Tag
 default_category: uncategorized
@@ -88,3 +96,12 @@ exclude_generator:
 ## Docs: http://hexo.io/docs/deployment.html
 deploy:
   type:
+
+marked:
+    gfm: false
+    pedantic: false
+    sanitize: false
+    tables: true
+    breaks: true
+    smartLists: true
+    smartypants: true

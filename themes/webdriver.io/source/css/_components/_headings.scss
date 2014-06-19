@@ -1,0 +1,32 @@
+h2 {
+    margin: 10px 0 10px;
+    font-weight: 300;
+    font-size: $h2Size;
+}
+
+h3 {
+    font-size: $h3Size;
+    margin: 15px 0 10px;
+}
+
+h4 {
+    color: $orange;
+    font-size: $h4Size;
+    margin-bottom: 10px;
+}
+
+h5 {
+    @include border-radius(3px);
+    background: $orange;
+    color: $white;
+    font-size: 16px;
+    padding: 4px 10px;
+    margin: 10px 0;
+}
+
+h6 {
+    font-size: 16px;
+    line-height: 1.1em;
+    padding: 10px 0 0;
+    font-weight: 300;
+}

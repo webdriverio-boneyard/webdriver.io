@@ -1,0 +1,85 @@
+// import compass plugins
+@import "compass";
+
+// reset CSS before including inform styles
+@include global-reset();
+
+// import google fonts
+@import url("http://fonts.googleapis.com/css?family=Lato:100,300,400,700");
+
+// import utilities
+@import "_utils/vars";
+@import "_utils/fonts";
+@import "_utils/sprites";
+
+// import components
+@import "_components/container";
+@import "_components/columns";
+@import "_components/article";
+@import "_components/syntax";
+@import "_components/headings";
+@import "_components/links";
+@import "_components/button";
+
+// import modules
+@import "_modules/header";
+@import "_modules/social";
+@import "_modules/footer";
+@import "_modules/teaser";
+@import "_modules/commandList";
+@import "_modules/responsive";
+@import "_modules/mainnavigation";
+
+// general styles
+html,body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background: $bodyBackground;
+    font-family: $fontRegular;
+    font-size: 16px;
+    color: $textColor;
+    line-height: 1.3em;
+}
+
+.runyourtests a {
+    font-size: 0;
+    color: transparent;
+    width: 31%;
+    display: block;
+    float: left;
+    margin: 0 1.5% 10px;
+
+    &[href="https://saucelabs.com"]              { @extend .sprite-sauce-labs-logo-sw; margin-left: 0; }
+    &[href="https://saucelabs.com"]:hover        { @extend .sprite-sauce-labs-logo }
+    &[href="http://www.browserstack.com/"]       { @extend .sprite-browserstack-logo-sw }
+    &[href="http://www.browserstack.com/"]:hover { @extend .sprite-browserstack-logo }
+    &[href="http://www.testingbot.com/"]         { @extend .sprite-testingbot-logo-sw; margin-bottom: 0; }
+    &[href="http://www.testingbot.com/"]:hover   { @extend .sprite-testingbot-logo }
+}
+img[alt="TestingBot"] {
+    margin-right: 0;
+}
+
+strong {
+    font-family: $fontBold;
+}
+
+p {
+    padding: 10px 0;
+    overflow: hidden;
+    font-weight: 300;
+}
+
+[class*="icon-"]:before,
+[class*="icon-"]:after {
+  font-family: 'FontAwesome', sans-serif;
+  text-decoration: inherit;
+  display: inline-block;
+  speak: none;
+}
+
+.whatis {
+    margin-bottom: 30px;
+}

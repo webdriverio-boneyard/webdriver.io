@@ -1,0 +1,95 @@
+/* github.com style (c) Vasily Polovnyov <vast@whiteants.net> */
+
+.highlight {
+    display: block;
+    background: $highlight-background;
+    font-size: $highlight-font-size;
+    font-family: $fontCode;
+    border: 1px solid $highlight-border;
+    border-radius: 4px 4px 3px 3px;
+    margin-top: 10px;
+
+    figcaption {
+        padding: 5px 10px;
+        font-size: $highlight-font-size;
+        text-align: left;
+        color: #555;
+        text-shadow: 0 1px 0 $white;
+        border-bottom: 1px solid $highlight-border;
+        background-color: $highlight-background-caption;
+    }
+
+    .gutter {
+        padding: 5px 8px;
+        font-family: $fontCode;
+        color: $highlight-line-number;
+        vertical-align: top;
+        text-align: right;
+        border-right: 1px solid $highlight-seperator;
+        line-height: $highlight-line-height;
+    }
+
+    .code {
+        padding-left: 10px;
+        line-height: $highlight-line-height;
+    }
+
+    .comment, .template_comment, .diff .header, .javadoc {
+        color: $highlight-comments;
+        font-style: italic
+    }
+    .keyword, .css .rule .keyword, .winutils, .javascript .title, .nginx .title, .subst, .request, .status {
+        color: $highlight-keyword;
+        font-weight: bold
+    }
+    .number, .hexcolor, .ruby .constant {
+        color: $highlight-number;
+    }
+    .string, .tag .value, .phpdoc, .tex .formula {
+        color: $highlight-string;
+    }
+    .title, .id, .coffeescript .params, .scss .preprocessor {
+        color: $highlight-title;
+        font-weight: bold
+    }
+    .javascript .title, .lisp .title, .clojure .title, .subst {
+        font-weight: normal
+    }
+    .class .title, .haskell .type, .vhdl .literal, .tex .command {
+        color: $highlight-class;
+        font-weight: bold
+    }
+    .tag, .tag .title, .rules .property, .django .tag .keyword {
+        color: $highlight-tag;
+        font-weight: normal
+    }
+    .attribute, .variable, .lisp .body {
+        color: $highlight-attribute;
+    }
+    .regexp {
+        color: $highlight-regexp;
+    }
+    .symbol, .ruby .symbol .string, .lisp .keyword, .tex .special, .prompt {
+        color: $highlight-symbol;
+    }
+    .built_in, .lisp .title, .clojure .built_in {
+        color: $highlight-builtin;
+    }
+    .preprocessor, .pragma, .pi, .doctype, .shebang, .cdata {
+        color: $highlight-preprocessor;
+        font-weight: bold
+    }
+    .deletion {
+        background: $highlight-deletion;
+    }
+    .addition {
+        background: $highlight-addition;
+    }
+    .diff .change {
+        background: $highlight-diff;
+    }
+    .chunk {
+        color: $highlight-chunk;
+    }
+
+}

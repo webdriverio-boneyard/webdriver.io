@@ -1,0 +1,12 @@
+article {
+    ol {
+        list-style: initial;
+        list-style-type: decimal;
+        margin: 10px 0;
+
+        li {
+            margin: 0 0 10px 20px;
+            line-height: 1.3em;
+        }
+    }
+}

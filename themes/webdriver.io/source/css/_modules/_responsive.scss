@@ -1,0 +1,241 @@
+@media only screen and (max-width: 960px) {
+
+    header {
+
+        .container {
+            background-position: 24.12% 40px, 25% 104px;
+
+            .hero {
+                position: absolute;
+                bottom: 30px;
+                left: 20px;
+            }
+
+            aside {
+                display: none;
+            }
+
+            .col2 {
+                padding: 2% 2% 2% 1%
+            }
+
+            .col2.last {
+                position: absolute;
+                right: 0;
+                text-align: right;
+                padding: 185px 0 2% 1%;
+
+                .link {
+                    float: right;
+                    margin: 0 20px 20px 0;
+                }
+            }
+
+        }
+
+    }
+
+    .cloudLink.testingbot {
+        margin-left: 0;
+    }
+
+    footer .container {
+        margin: 0 2%;
+    }
+
+    .col2 {
+        padding: 2% 2% 2% 0%;
+
+        &.last {
+            padding: 2% 0% 2% 2%;
+        }
+    }
+
+    .teaser .teaserbox,
+    .teaser .teaserbox:last-Child {
+        margin: 0 9% 30px;
+    }
+
+    .content {
+        margin: 50px 2%;
+    }
+
+    .social {
+        margin: 0;
+    }
+
+    .gist-header {
+        text-align: center;
+        padding: 5px;
+
+        span {
+            display: none;
+        }
+    }
+
+    footer .col2,
+    footer .col2.last {
+        padding: 2% 0 2%;
+        width: 50%;
+    }
+
+}
+
+@media only screen and (max-width: 750px) {
+
+    header  {
+        padding-top: 0;
+        height: $headerHeight;
+
+        .container {
+            background-position: 50% 15px,46% 80px;
+
+            .col2,
+            .col2:first-Child {
+                max-width: 100%;
+                width: 100%;
+                height: 93%;
+
+                .hero {
+                    position: static;
+                    display: block;
+                    margin: 0;
+                    padding-top: 210px;
+                    width: 100%;
+                    text-align: center;
+                }
+            }
+
+            .col2.last {
+                height: auto;
+                text-align: center;
+                padding-top: 290px;
+
+                .link {
+                    float: none;
+                    display: inline-block;
+                    margin: 0 5px;
+                }
+            }
+        }
+    }
+
+    .teaser .teaserbox,
+    .teaser .teaserbox:last-Child {
+        margin: 0 6% 30px 0;
+    }
+
+    .links {
+        display: none;
+    }
+    .commandList .col2.description {
+        width: 100%;
+        h3 {
+            display: none;
+        }
+    }
+}
+
+
+@media only screen and (max-width: 700px) {
+
+    .gist-header {
+        button {
+            padding: 5px 5px 5px;
+            margin: 0 3px;
+        }
+    }
+
+    footer .col2,
+    footer .col2.last {
+        width: 100%;
+        max-width: 100%;
+        padding: 2% 0;
+        
+        &.last {
+            float: none;
+            clear: both;
+            margin-top: 0;
+            max-width: 96%;
+            margin-bottom: 0;
+            padding-top: 0;
+
+            .badges {
+                text-align: left;
+            }
+        }
+    }
+
+    cite {
+        margin-bottom: 10px;
+    }
+
+    section .container .col2 {
+        float: none;
+        width: 100%;
+        max-width: 100%;
+
+        &.last {
+            padding: 0 0 50px;
+            width: 100%;
+            max-width: 100%;
+            margin: 0;
+        }
+
+        h2 {
+            margin-top: 0;
+        }
+    }
+    .cloudLink.testingbot {
+        margin-left: 1.5%;
+    }
+}
+
+@media only screen and (max-width: 570px) {
+    .teaser .teaserbox,
+    .teaser .teaserbox:last-Child {
+        float: none;
+        margin: 0 auto 30px;
+    }
+
+    .highlight pre {
+        overflow: scroll;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    header .container {
+        .col2 .hero,
+        .col2:first-Child .hero {
+            padding-top: 230px;
+
+            h1 {
+                font-size: 38px;
+            }
+        }
+
+        .col2 .link {
+            width: 140px;
+            font-size: 14px;
+            height: 30px;
+            line-height: 2em;
+        }
+    }
+
+    .gist-header {
+        padding-top: 0;
+
+        button {
+            margin: 5px 0 0;
+        }
+    }
+
+    .icon-link span {
+        display: none;
+    }
+
+    .commandList .col2.description .command strong {
+        display: block;
+        margin-top: 20px;
+    }
+}

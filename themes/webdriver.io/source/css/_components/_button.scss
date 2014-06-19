@@ -1,0 +1,6 @@
+.button {
+    @include border-radius(5px);
+    background: $orange;
+    color: $headerFontColor;
+    text-decoration: none;
+}
