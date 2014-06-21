@@ -1,0 +1,21 @@
+<% 
+var pageByCategory = {},
+    pageByCategoryOrdered = {};
+
+site.pages.each(function(page) {
+
+    if(!page.category) return;
+
+    if(!pageByCategory[page.category]) {
+        pageByCategory[page.category] = [];
+    }
+
+    pageByCategory[page.category].push(page);
+});
+
+Object.keys(pageByCategory).sort().forEach(function(key) {
+    pageByCategoryOrdered[key] = pageByCategory[key];
+});
+%>
+
+<%- partial('api', {post: page, commands: pageByCategoryOrdered}) %>

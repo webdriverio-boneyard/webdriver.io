@@ -1,39 +1,26 @@
 <%
-var currentPost = get_posts({
-    query: { 
-        name: page.name
-    },
-    count: 1
-});
-
-var pageCategory;
-
-page.categories.each(function(cat) { 
-
-    pageCategory = cat.name; 
-
-});
-
+var currentPage = page.name;
 %>
 
 <section class="api">
 
     <nav class="apinav">
-    <% site.categories.each(function(category) { %>
-        
-        <h3><a href="#" class="icon-folder-close-alt<% if (pageCategory === category.name) { %> active<% } %>" data-open="<%- category.name %>"><%- category.name %></a></h3>
-        <div class="commands <%- category.name %><% if (pageCategory === category.name) { %> active<% } %>">
+    <% _.each(commands, function(pages, category) { %>
+
         <%
-        var api = get_posts({
-            query: { 
-                categories: category.name
-            },
-            count: 999
-        });
+        // order commands
+        function orderCommandName(a, b) {
+            return a.name < b.name ? -1 : 1;
+        }
+        pages.sort(orderCommandName);
+        %>
 
-        api.forEach(function(post){ %>
+        <h3><a href="#" class="icon-folder-close-alt<% if (page.category === category) { %> active<% } %>" data-open="<%- category %>"><%- category %></a></h3>
+        <div class="commands <%- category %><% if (page.category === category) { %> active<% } %>">
+        
+        <% _.each(pages, function(page){ %>
 
-            <a href="/api/<%- category.name %>/<%- post.name %>"<% if (page.name === post.name) { %> class="active"<% } %>><%- post.name %></a>
+            <a href="/api/<%- category %>/<%- page.name %>"<% if (currentPage === page.name) { %> class="active"<% } %>><%- page.name %></a>
 
         <% }) %>
         </div>
@@ -44,7 +31,7 @@ page.categories.each(function(cat) {
 
     <article class="doc">
         <%
-        var dir = pageCategory === 'protocol' ? 'protocol' : 'commands';
+        var dir = page.category === 'protocol' ? 'protocol' : 'commands';
         %>
         <a href="https://github.com/camme/webdriverjs/blob/master/lib/<%- dir %>/<%- page.name %>.js" target="_blank" class="btn icon-search source">View Source</a>
         <a href="https://github.com/camme/webdriverjs/edit/master/lib/<%- dir %>/<%- page.name %>.js" target="_blank" class="btn icon-edit improve">Improve this doc</a>
