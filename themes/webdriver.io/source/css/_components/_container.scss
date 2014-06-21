@@ -1,6 +1,9 @@
 .content {
+    min-height: 100%;
+    height: auto !important;
+    height: 100%;
     overflow: hidden;
-    margin: 30px 0 225px;
+    margin: 30px 0 -35px;
 }
 
 .container {

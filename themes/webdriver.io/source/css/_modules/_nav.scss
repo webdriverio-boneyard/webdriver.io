@@ -65,7 +65,7 @@
             font-size: 0.8em;
             border-left: 5px solid lighten($orange, 40%);
 
-            &.active {
+            &.active, &:hover {
                 color: $orange;
                 border-color: $orange;
             }
