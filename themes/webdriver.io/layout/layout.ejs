@@ -1,5 +1,5 @@
-<%- partial('_partial/head') %>
-<%- partial('_partial/navi') %>
+<%- partial('_partial/head', {}, {cache: true}) %>
+<%- partial('_partial/navi', {}, {cache: true}) %>
 
 <section class="content">
     <div class="container">
@@ -7,5 +7,5 @@
     </div>
 </section>
 
-<%- partial('_partial/footer') %>
-<%- partial('_partial/scripts') %>
+<%- partial('_partial/footer', {}, {cache: true}) %>
+<%- partial('_partial/scripts', {}, {cache: true}) %>
