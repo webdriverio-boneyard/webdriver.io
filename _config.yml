@@ -3,7 +3,7 @@
 ## Source: https://github.com/tommy351/hexo/
 
 # Site
-title: Webdriver.io
+title: WebdriverIO - Selenium 2.0 javascript bindings for nodejs
 subtitle: Selenium 2.0 bindings for NodeJS
 description: A nodejs bindings implementation for selenium 2.0/webdriver.
 author: Christian Bromann
