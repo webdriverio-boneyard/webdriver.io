@@ -30,6 +30,11 @@
             }
         }
 
+        img {
+            width: auto;
+            max-width: 100%;
+        }
+
         >table {
             width: 100%;
             border: 1px solid $highlight-border;

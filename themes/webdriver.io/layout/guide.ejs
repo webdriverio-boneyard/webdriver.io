@@ -1,0 +1,69 @@
+<% 
+var pageByCategory = {},
+    pageByCategoryOrdered = {};
+
+site.pages.each(function(page) {
+
+    if(!page.category || page.tags !== 'guide') return;
+
+    if(!pageByCategory[page.category]) {
+        pageByCategory[page.category] = [];
+    }
+
+    pageByCategory[page.category].push(page);
+});
+
+Object.keys(pageByCategory).sort().forEach(function(key) {
+    pageByCategoryOrdered[key] = pageByCategory[key];
+});
+
+var currentPage = page.name;
+%>
+
+<section class="api">
+    <nav class="apinav guide">
+    <% _.each(pageByCategoryOrdered, function(pages, category) { %>
+
+        <%
+
+        // order commands
+        function orderCommandName(a, b) {
+            return a.index < b.index ? -1 : 1;
+        }
+        pages.sort(orderCommandName);
+
+        // sanitize categories
+        var categories = {
+            getstarted: 'Get Started',
+            using: 'Using WebdriverIO'
+        };
+
+        var pageNames = {
+            v2: 'What is new?',
+            bindingscommands: 'Bindings & Commands',
+            customcommands: 'Custome Commands'
+        }
+
+        var categoryName = categories[category] || category;
+
+        %>
+
+        <h3><a href="#" class="icon-folder-close-alt<% if (page.category === category) { %> active<% } %>" data-open="<%- category %>"><%- categoryName %></a></h3>
+        <div class="commands <%- category %><% if (page.category === category) { %> active<% } %>">
+        
+        <% _.each(pages, function(page){ %>
+
+            <a href="/guide/<%- category %>/<%- page.name %>"<% if (currentPage === page.name) { %> class="active"<% } %>><%- pageNames[page.name] || page.name %></a>
+
+        <% }) %>
+        </div>
+
+    <% }) %>
+    </nav>
+
+    <article class="doc">
+        <a href="https://github.com/webdriverio/webdriver.io/edit/master/source/guide/<%- page.name %>/index.md" target="_blank" class="btn icon-edit improve">Improve this doc</a>
+        <%- page.content %>
+    </article>
+
+</section>

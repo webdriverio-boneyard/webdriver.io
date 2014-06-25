@@ -65,6 +65,7 @@ img[alt="TestingBot"] {
 
 strong {
     font-family: $fontBold;
+    font-weight: 400;
 }
 
 p {
@@ -93,4 +94,10 @@ code {
 
 .whatis {
     margin-bottom: 30px;
+}
+
+blockquote {
+    margin-left: 20px;
+    padding-left: 10px;
+    border-left: 5px solid #DDD;
 }

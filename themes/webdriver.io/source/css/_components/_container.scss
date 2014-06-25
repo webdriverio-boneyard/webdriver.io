@@ -3,7 +3,7 @@
     height: auto !important;
     height: 100%;
     overflow: hidden;
-    margin: 30px 0 -337px;
+    margin: 30px 0 -300px;
 
     .container {
         margin-bottom: 360px;
@@ -13,4 +13,5 @@
 .container {
     max-width: $pageWidth;
     margin: 0 auto;
+    overflow: hidden;
 }
