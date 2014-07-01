@@ -53,7 +53,7 @@ var currentPage = page.name;
         
         <% _.each(pages, function(page){ %>
 
-            <a href="/guide/<%- category %>/<%- page.name %>"<% if (currentPage === page.name) { %> class="active"<% } %>><%- pageNames[page.name] || page.name %></a>
+            <a href="/guide/<%- category %>/<%- page.name %>.html"<% if (currentPage === page.name) { %> class="active"<% } %>><%- pageNames[page.name] || page.name %></a>
 
         <% }) %>
         </div>
@@ -62,7 +62,7 @@ var currentPage = page.name;
     </nav>
 
     <article class="doc">
-        <a href="https://github.com/webdriverio/webdriver.io/edit/master/source/guide/<%- page.name %>/index.md" target="_blank" class="btn icon-edit improve">Improve this doc</a>
+        <a href="https://github.com/webdriverio/webdriver.io/edit/master/source/guide/<%- page.name %>.md" target="_blank" class="btn icon-edit improve">Improve this doc</a>
         <%- page.content %>
     </article>
 

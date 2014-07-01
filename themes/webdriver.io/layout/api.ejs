@@ -37,7 +37,7 @@ var currentPage = page.name;
         
         <% _.each(pages, function(page){ %>
 
-            <a href="/api/<%- category %>/<%- page.name %>"<% if (currentPage === page.name) { %> class="active"<% } %>><%- page.name %></a>
+            <a href="/api/<%- category %>/<%- page.name %>.html"<% if (currentPage === page.name) { %> class="active"<% } %>><%- page.name %></a>
 
         <% }) %>
         </div>
