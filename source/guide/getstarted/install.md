@@ -7,8 +7,7 @@ index: 0
 # Install
 
 You will need to have [Node.js](http://nodejs.org/) and [NPM](https://www.npmjs.org/) installed on your machine.
-Check out the project website for more instruction. After that you can download WebdriverIO via NPM:
-github or use NPM.
+Check out the project website for more instruction. After that you can download WebdriverIO via NPM.
 
 ```sh
 $ npm install webdriverio
@@ -34,3 +33,13 @@ implements WebDriver's wire protocol for Chromium. It is being developed by memb
 WebDriver teams. For running Chrome browser tests on your local machine you need to download ChromeDriver
 from the project website and make it available on your machine by setting the PATH to the ChromeDriver
 executable.
+
+## Use of existing standalone package
+
+If you don't want to setup everything by yourself, you can also use on of the NPM selenium standalone
+packages like: [vvo/selenium-standalone](https://github.com/vvo/selenium-standalone). After installing
+it (globally) you can run your server by executing:
+
+```sh
+$ start-selenium
+```

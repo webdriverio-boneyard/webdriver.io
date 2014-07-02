@@ -1,5 +1,5 @@
 name: bindingscommands
-category: getstarted
+category: using
 tags: guide
 index: 1
 ---

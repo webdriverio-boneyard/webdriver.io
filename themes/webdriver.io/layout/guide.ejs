@@ -62,7 +62,10 @@ var currentPage = page.name;
     </nav>
 
     <article class="doc">
-        <a href="https://github.com/webdriverio/webdriver.io/edit/master/source/guide/<%- page.name %>.md" target="_blank" class="btn icon-edit improve">Improve this doc</a>
+        <% if(page.name) { %>
+            <a href="https://github.com/webdriverio/webdriver.io/edit/master/source/guide/<%- page.name %>.md" target="_blank" class="btn icon-edit improve">Improve this doc</a>
+        <% } %>
+
         <%- page.content %>
     </article>
 
