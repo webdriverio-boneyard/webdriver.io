@@ -8,3 +8,5 @@ public/
 themes/landscape
 .sass-cache/
 themes/webdriver.io/source/css/screen.css
+source/api/
+themes/webdriver.io/source/images/sprite-*

@@ -10,7 +10,7 @@ Eventhandling
 The following functions are supported: `on`,`once`,`emit`,`removeListener`,`removeAllListeners`.
 They behave exactly as described in the official NodeJS [docs](http://nodejs.org/api/events.html).
 There are some predefined events (`error`,`init`,`end`, `command`) which cover important
-WebdriverJS events.
+WebdriverIO events.
 
 ## Example
 

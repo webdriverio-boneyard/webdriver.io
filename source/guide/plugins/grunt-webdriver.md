@@ -3,7 +3,7 @@ category: plugins
 tags: guide
 ---
 
-# grunt-webdriver [![Build Status](https://travis-ci.org/webdriverjs/grunt-webdriver.png)](https://travis-ci.org/christian-bromann/grunt-webdriver)
+# grunt-webdriver [![Build Status](https://travis-ci.org/webdriverio/grunt-webdriver.png)](https://travis-ci.org/christian-bromann/grunt-webdriver)
 
 > grunt-webdriver is a grunt plugin to run selenium tests with Mocha and [WebdriverIO](http://webdriver.io)
 
@@ -93,9 +93,9 @@ grunt.initConfig({
 
 ### Options
 
-All options get passed into the WebdriverJS `remote` function. So this is the place where
-you can define your driver instance. You'll find more informations about all WebdriverJS
-options [here](https://github.com/camme/webdriverjs/#options). You can overwrite these
+All options get passed into the WebdriverIO `remote` function. So this is the place where
+you can define your driver instance. You'll find more informations about all WebdriverIO
+options [here](https://github.com/camme/webdriverio/#options). You can overwrite these
 options in any target. Also you have to define all Mocha options here. The following
 are supported:
 
@@ -176,9 +176,9 @@ grunt.initConfig({
 })
 ```
 
-The corresponding *Hello World* test script is using WebdriverJS API to search the
+The corresponding *Hello World* test script is using WebdriverIO API to search the
 grunt-webdriver repository on GitHub. The global `browser` variable lets you access
-your client instance. See more functions and test examples in the [WebdriverJS](https://github.com/Camme/webdriverjs) repository.
+your client instance. See more functions and test examples in the [WebdriverIO](https://github.com/Camme/webdriverio) repository.
 
 ```js
 'use strict';

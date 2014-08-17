@@ -3,15 +3,15 @@ category: plugins
 tags: guide
 ---
 
-WebdriverCSS [![Build Status](https://travis-ci.org/webdriverjs/webdrivercss.png?branch=master)](https://travis-ci.org/webdriverjs/webdrivercss) [![Coverage Status](https://coveralls.io/repos/webdriverjs/webdrivercss/badge.png?branch=master)](https://coveralls.io/r/webdriverjs/webdrivercss?branch=master)
+WebdriverCSS [![Build Status](https://travis-ci.org/webdriverio/webdrivercss.png?branch=master)](https://travis-ci.org/webdriverio/webdrivercss) [![Coverage Status](https://coveralls.io/repos/webdriverio/webdrivercss/badge.png?branch=master)](https://coveralls.io/r/webdriverio/webdrivercss?branch=master)
 ============
 
-__CSS regression testing in WebdriverJS__. This plugin is an automatic regression-testing
-tool for [WebdriverJS](http://webdriver.io). It was inspired by [James Cryers](https://github.com/jamescryer)
+__CSS regression testing in WebdriverIO__. This plugin is an automatic regression-testing
+tool for [WebdriverIO](http://webdriver.io). It was inspired by [James Cryers](https://github.com/jamescryer)
 awesome project called [PhantomCSS](https://github.com/Huddle/PhantomCSS). After
-initialization it enhances a WebdriverJS instance with an additional command called
+initialization it enhances a WebdriverIO instance with an additional command called
 `webdrivercss` and enables the possibility to save screenshots of specific parts of
-your application. 
+your application.
 
 ### Never loose track of unwanted CSS changes:
 
@@ -21,7 +21,7 @@ your application.
 ## How does it work?
 
 1. Define areas within your application that should always look the same
-2. Use WebdriverJS and WebdriverCSS to write some E2E tests and take screenshots of these areas
+2. Use WebdriverIO and WebdriverCSS to write some E2E tests and take screenshots of these areas
 3. Continue working on your application or website
 4. After a while rerun the tests
 5. If desired areas differ from previous taken screenshots an image diff gets generated and you get notified in your tests
@@ -30,8 +30,8 @@ your application.
 ## Example
 
 ```js
-// init WebdriverJS
-var client = require('webdriverjs').remote({desiredCapabilities:{browserName: 'chrome'}})
+// init WebdriverIO
+var client = require('webdriverio').remote({desiredCapabilities:{browserName: 'chrome'}})
 // init WebdriverCSS
 require('webdrivercss').init(client);
 
@@ -79,7 +79,7 @@ $ npm install webdriverio # if not already installed
 
 ## Setup
 
-To use this plugin just call the `init` function and pass the desired WebdriverJS instance
+To use this plugin just call the `init` function and pass the desired WebdriverIO instance
 as parameter. Additionally you can define some options to configure the plugin. After that
 the `webdrivercss` command will be available only for this instance.
 
@@ -100,8 +100,8 @@ the `webdrivercss` command will be available only for this instance.
 ### Example
 
 ```js
-// create a WebdriverJS instance
-var client = require('webdriverjs').remote({
+// create a WebdriverIO instance
+var client = require('webdriverio').remote({
     desiredCapabilities: {
         browserName: 'phantomjs'
     }
@@ -119,7 +119,7 @@ require('webdrivercss').init(client, {
 
 ## Usage
 
-WebdriverCSS enhances an WebdriverJS instance with an command called `webdrivercss`
+WebdriverCSS enhances an WebdriverIO instance with an command called `webdrivercss`
 
 `client.webdrivercss('some_id', {options}, callback);`
 
@@ -244,7 +244,7 @@ an example:
 client
     .url('http://tumblr.com/themes')
     .webdrivercss('irgendwas', {
-        exclude: '#theme_garden > div > section.carousel > div.carousel_slides,' + 
+        exclude: '#theme_garden > div > section.carousel > div.carousel_slides,' +
                  '#theme_garden > div > section:nth-child(3) > div.theme_scroll_wrap,' +
                  '#theme_garden > div > section:nth-child(4) > div.theme_scroll_wrap',
         screenWidth: [1200]

@@ -41,7 +41,7 @@ in front of the query string (e.g. `*=driver`)
 ```
 
 ```js
-client.getText('=*driver', function(err, text) {
+client.getText('*=driver', function(err, text) {
     console.log(text); // outputs: "WebdriverIO"
 });
 ```

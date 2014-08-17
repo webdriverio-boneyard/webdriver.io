@@ -5,7 +5,7 @@ layout: guide
 
 Welcome to the WebdriverIO documentation. It will help you to get started fast. If you run into problems you can
 find help and answers in our [Google Group](https://groups.google.com/forum/#!forum/wdjs) or you can hit me on
-[Twitter](https://twitter.com/webdriverjs). The following will give you a short step by step introductio to get
+[Twitter](https://twitter.com/webdriverio). The following will give you a short step by step introductio to get
 your first WebdriverIO script up and running.
 
 Lets suppose you've [Node.js](http://nodejs.org/) and Java already installed. First thing we need to do is to
@@ -36,19 +36,19 @@ NPM:
 
 ** 4. Download webdriverjs**
 ```sh
-$ npm install webdriverjs
+$ npm install webdriverio
 ```
 
 ** 5. Create a test file (test.js) with the following content**
 ```js
-var webdriverjs = require('webdriverjs');
+var webdriverio = require('webdriverio');
 var options = {
     desiredCapabilities: {
         browserName: 'firefox'
     }
 };
 
-webdriverjs
+webdriverio
     .remote(options)
     .init()
     .url('http://www.google.com')

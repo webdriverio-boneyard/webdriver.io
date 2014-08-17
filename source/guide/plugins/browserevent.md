@@ -3,7 +3,7 @@ category: plugins
 tags: guide
 ---
 
-Browserevent [![Build Status](https://travis-ci.org/webdriverjs/browserevent.svg?branch=master)](https://travis-ci.org/webdriverjs/browserevent)
+Browserevent [![Build Status](https://travis-ci.org/webdriverio/browserevent.svg?branch=master)](https://travis-ci.org/webdriverio/browserevent)
 ============
 
 This is an experimental feature that helps you to listen on events within the browser. It
@@ -11,7 +11,7 @@ is currently **only** supported in Chrome browser (other browser will eventually
 To register an event call the `addEventListener` command. If an event gets invoked it returns
 almost the complete event object that got caught within the browser. Only the `Window` will
 be removed to avoid circular references. All objects from type `HTMLElement` will be
-replaced by their xPath. This will help you to query and identify this element with WebdriverJS.
+replaced by their xPath. This will help you to query and identify this element with WebdriverIO.
 
 ## Install
 

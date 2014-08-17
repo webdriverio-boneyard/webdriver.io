@@ -3,7 +3,7 @@ category: plugins
 tags: guide
 ---
 
-# webdriverjs-angular <br>[![Build Status](https://travis-ci.org/webdriverjs/webdriverjs-angular.png?branch=master)](https://travis-ci.org/webdriverjs/webdriverjs-angular) [![Dependency Status](https://david-dm.org/webdriverjs/webdriverjs-angular.png?theme=shields.io)](https://david-dm.org/webdriverjs/webdriverjs-angular) [![devDependency Status](https://david-dm.org/webdriverjs/webdriverjs-angular/dev-status.png?theme=shields.io)](https://david-dm.org/webdriverjs/webdriverjs-angular#info=devDependencies)
+# webdriverjs-angular <br>[![Build Status](https://travis-ci.org/webdriverio/webdriverjs-angular.png?branch=master)](https://travis-ci.org/webdriverio/webdriverjs-angular) [![Dependency Status](https://david-dm.org/webdriverio/webdriverjs-angular.png?theme=shields.io)](https://david-dm.org/webdriverio/webdriverjs-angular) [![devDependency Status](https://david-dm.org/webdriverio/webdriverjs-angular/dev-status.png?theme=shields.io)](https://david-dm.org/webdriverio/webdriverjs-angular#info=devDependencies)
 
 Functional test you angularjs application without having to `.pause()` or `.wait()`.
 
@@ -32,7 +32,7 @@ webdriverjsAngular
 
 For more options, usage and API details, have a look at the [API](/api.html) section.
 
-## Why another webdriverjs lib?
+## Why another webdriverjs library?
 
 1. webdriverjs-angular is based on an existing lib, it's extending
 [WebdriverIO](https://github.com/webdriverio/webdriverio).
@@ -52,7 +52,7 @@ to do it.
 
 Unlike [angular/protractor](https://github.com/angular/protractor) or
 [sebv/wd-tractor](https://github.com/sebv/wd-tractor),
-we do not enhance webdriverjs API with angularJS-related
+we do not enhance WebdriverIO API with angularJS-related
 command.
 
 You will not find any `elementByNgBinding`, `addMockModule`,
@@ -61,7 +61,7 @@ You will not find any `elementByNgBinding`, `addMockModule`,
 We think your functionnal tests should be as framework-agnostic as possible.
 
 If you need `elementByNgBinding`, just use regular
-[camme/webdriverjs](https://github.com/camme/webdriverjs)
+[WebdriverIO](https://github.com/webdriverio/webdriverio)
 commands like `.element('[ng-binding=model]')`.
 
 ## Local testing
