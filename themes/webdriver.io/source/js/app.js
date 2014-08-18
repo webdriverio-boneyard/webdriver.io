@@ -19,7 +19,6 @@ App.prototype.openCommandList = function(e) {
         category = elem.data('open'),
         commandList = $('.commands.' + category);
 
-    console.log(elem);
     window.test = elem;
 
     if(commandList.is(':visible')) {
@@ -27,7 +26,9 @@ App.prototype.openCommandList = function(e) {
         return $('.commands.' + category).slideUp();
     }
 
-    $('.commands:visible').removeClass('active').slideUp();
+    $('.commands:visible').slideUp(function() {
+        $(this).removeClass('active')
+    });
     $('.commands.' + category).slideToggle();
 
     this.ui.apinav.find('h3 a').removeClass('active');
