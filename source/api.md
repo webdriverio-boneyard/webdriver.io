@@ -1,4 +1,5 @@
 layout: api
+name: api
 ---
 
 # WebdriverIO API Docs

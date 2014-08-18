@@ -39,8 +39,9 @@
         margin-left: 0;
     }
 
-    footer .container {
-        margin: 0 2%;
+    footer .container,
+    .mainnav {
+        padding: 0 2%;
     }
 
     .col2 {
@@ -53,11 +54,12 @@
 
     .teaser .teaserbox,
     .teaser .teaserbox:last-Child {
-        margin: 0 9% 30px;
+        margin: 0 auto 30px;
+        float: none;
     }
 
     .content {
-        margin: 50px 2%;
+        margin: 0 2% -300px;
     }
 
     .social {
@@ -81,53 +83,34 @@
 
 }
 
+@media only screen and (max-width: 850px) {
+    .apinav {
+        display: none;
+        border-right: 0;
+        float: none;
+        margin-left: 55px;
+        width: 300px;
+        position: relative;
+        bottom: 10px;
+    }
+
+    .api .doc {
+        width: 100%;
+        border: 0;
+        padding: 0;
+    }
+
+    .navbar-toggle {
+        display: block;
+    }
+}
+
 @media only screen and (max-width: 750px) {
-
-    header  {
-        padding-top: 0;
-        height: $headerHeight;
-
-        .container {
-            background-position: 50% 15px,46% 80px;
-
-            .col2,
-            .col2:first-Child {
-                max-width: 100%;
-                width: 100%;
-                height: 93%;
-
-                .hero {
-                    position: static;
-                    display: block;
-                    margin: 0;
-                    padding-top: 210px;
-                    width: 100%;
-                    text-align: center;
-                }
-            }
-
-            .col2.last {
-                height: auto;
-                text-align: center;
-                padding-top: 290px;
-
-                .link {
-                    float: none;
-                    display: inline-block;
-                    margin: 0 5px;
-                }
-            }
-        }
-    }
-
-    .teaser .teaserbox,
-    .teaser .teaserbox:last-Child {
-        margin: 0 6% 30px 0;
-    }
 
     .links {
         display: none;
     }
+
     .commandList .col2.description {
         width: 100%;
         h3 {
@@ -151,7 +134,7 @@
         width: 100%;
         max-width: 100%;
         padding: 2% 0;
-        
+
         &.last {
             float: none;
             clear: both;
@@ -189,15 +172,18 @@
     .cloudLink.testingbot {
         margin-left: 1.5%;
     }
+
+    h1.header {
+        padding: 50px 0 0;
+        font-size: 67px;
+
+        span {
+            bottom: 8px;
+        }
+    }
 }
 
 @media only screen and (max-width: 570px) {
-    .teaser .teaserbox,
-    .teaser .teaserbox:last-Child {
-        float: none;
-        margin: 0 auto 30px;
-    }
-
     .highlight pre {
         overflow: scroll;
     }
@@ -237,5 +223,15 @@
     .commandList .col2.description .command strong {
         display: block;
         margin-top: 20px;
+    }
+
+    h1.header {
+        padding: 30px 0 0;
+        font-size: 50px;
+
+        span {
+            bottom: 6px;
+            border-radius: 6px;
+        }
     }
 }

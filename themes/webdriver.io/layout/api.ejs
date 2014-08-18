@@ -21,10 +21,19 @@ var currentPage = page.name;
 %>
 
 <section class="api">
+    <button class="navbar-toggle">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+    </button>
     <nav class="apinav">
-    <% _.each(pageByCategoryOrdered, function(pages, category) { %>
+    <%
+    var i = 0;
+    _.each(pageByCategoryOrdered, function(pages, category) { %>
 
         <%
+        ++i;
+
         // order commands
         function orderCommandName(a, b) {
             return a.name < b.name ? -1 : 1;
@@ -32,9 +41,9 @@ var currentPage = page.name;
         pages.sort(orderCommandName);
         %>
 
-        <h3><a href="#" class="icon-folder-close-alt<% if (page.category === category) { %> active<% } %>" data-open="<%- category %>"><%- category %></a></h3>
-        <div class="commands <%- category %><% if (page.category === category) { %> active<% } %>">
-        
+        <h3><a href="#" class="icon-folder-close-alt<% if (page.category === category || (i === 1 && currentPage === 'api')) { %> active<% } %>" data-open="<%- category %>"><%- category %></a></h3>
+        <div class="commands <%- category %><% if (page.category === category || (i === 1 && currentPage === 'api')) { %> active<% } %>">
+
         <% _.each(pages, function(page){ %>
 
             <a href="/api/<%- category %>/<%- page.name %>.html"<% if (currentPage === page.name) { %> class="active"<% } %>><%- page.name %></a>
@@ -49,8 +58,18 @@ var currentPage = page.name;
         <%
         if(page.name) {
             var dir = page.category === 'protocol' ? 'protocol' : 'commands';
+            var sourcePath = 'https://github.com/camme/webdriverjs/blob/master/lib/' + dir + '/' + page.name + '.js';
         %>
-        <a href="https://github.com/camme/webdriverjs/blob/master/lib/<%- dir %>/<%- page.name %>.js" target="_blank" class="btn icon-search source">View Source</a>
+
+        <% if (currentPage !== 'api') { %>
+
+            <%
+            sourcePath = 'https://github.com/webdriverio/webdriver.io/edit/master/source/api.md';
+            %>
+
+            <a href="<%- sourcePath %>" target="_blank" class="btn icon-search source">View Source</a>
+        <% } %>
+
         <a href="https://github.com/camme/webdriverjs/edit/master/lib/<%- dir %>/<%- page.name %>.js" target="_blank" class="btn icon-edit improve">Improve this doc</a>
         <% } %>
         <%- page.content %>

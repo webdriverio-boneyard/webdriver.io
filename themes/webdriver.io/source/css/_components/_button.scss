@@ -4,3 +4,22 @@
     color: $headerFontColor;
     text-decoration: none;
 }
+
+.navbar-toggle {
+    display: none;
+    cursor: pointer;
+    width: 35px;
+    height: 30px;
+    background: none;
+    border: 1px solid $orange;
+    border-radius: 5px;
+    position: absolute;
+    z-index: 1;
+
+    .icon-bar {
+        width: 100%;
+        display: block;
+        border-top: 2px solid $orange;
+        margin: 4px 0;
+    }
+}

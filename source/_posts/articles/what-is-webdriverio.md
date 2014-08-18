@@ -9,7 +9,7 @@ WebdriverIO lets you control a browser or a mobile application with just a few
 lines of code. Your test code will look simple, concise and easy to read. Creating
 automated tests is as easy as:
 
-``` javascript
+```js
 var webdriverjs = require('webdriverjs');
 var options = { desiredCapabilities: { browserName: 'chrome' } };
 

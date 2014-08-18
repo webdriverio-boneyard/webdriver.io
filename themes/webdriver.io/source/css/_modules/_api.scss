@@ -2,10 +2,10 @@
     background: $white;
     border-radius: 5px;
     padding: 15px;
+    margin-top: 30px;
     overflow: hidden;
 
     .doc {
-        padding: 20px 0;
         float: left;
         width: 74%;
         padding-left: 20px;
@@ -22,8 +22,8 @@
             float: right;
             margin-bottom: 50px;
 
-            &.improve {
-                margin-right: 20px;
+            &.source {
+                margin-left: 20px;
             }
             &:before {
                 margin-right: 5px;
@@ -41,7 +41,7 @@
 
             thead {
                 background: #f1f1f1;
-                
+
                 th {
                     padding: 10px;
                     font-weight: bold;

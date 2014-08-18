@@ -1,4 +1,5 @@
 layout: guide
+name: guide
 ---
 
 # Developer Guide

@@ -6,7 +6,8 @@ var App = function() {
     };
 
     this.events = {
-        'click .apinav>h3>a': 'openCommandList'
+        'click .apinav>h3>a': 'openCommandList',
+        'click .navbar-toggle': 'openNavbar'
     };
 
     this.delegateEvents();
@@ -34,6 +35,11 @@ App.prototype.openCommandList = function(e) {
     this.ui.apinav.find('h3 a').removeClass('active');
     elem.addClass('active');
 };
+
+App.prototype.openNavbar = function(e) {
+    e.preventDefault();
+    this.ui.apinav.slideToggle();
+}
 
 /**
  * delegate events to dom objects
