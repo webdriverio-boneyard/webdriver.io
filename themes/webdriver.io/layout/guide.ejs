@@ -1,4 +1,4 @@
-<% 
+<%
 var pageByCategory = {},
     pageByCategoryOrdered = {};
 
@@ -22,9 +22,12 @@ var currentPage = page.name;
 
 <section class="api">
     <nav class="apinav guide">
-    <% _.each(pageByCategoryOrdered, function(pages, category) { %>
+    <%
+    var i = 0;
+    _.each(pageByCategoryOrdered, function(pages, category) { %>
 
         <%
+        ++i;
 
         // order commands
         function orderCommandName(a, b) {
@@ -48,9 +51,9 @@ var currentPage = page.name;
 
         %>
 
-        <h3><a href="#" class="icon-folder-close-alt<% if (page.category === category) { %> active<% } %>" data-open="<%- category %>"><%- categoryName %></a></h3>
-        <div class="commands <%- category %><% if (page.category === category) { %> active<% } %>">
-        
+        <h3><a href="#" class="icon-folder-close-alt<% if (page.category === category || (i === 1 && currentPage === 'guide')) { %> active<% } %>" data-open="<%- category %>"><%- categoryName %></a></h3>
+        <div class="commands <%- category %><% if (page.category === category || (i === 1 && currentPage === 'guide')) { %> active<% } %>">
+
         <% _.each(pages, function(page){ %>
 
             <a href="/guide/<%- category %>/<%- page.name %>.html"<% if (currentPage === page.name) { %> class="active"<% } %>><%- pageNames[page.name] || page.name %></a>
@@ -63,7 +66,16 @@ var currentPage = page.name;
 
     <article class="doc">
         <% if(page.name) { %>
-            <a href="https://github.com/webdriverio/webdriver.io/edit/master/source/guide/<%- page.name %>.md" target="_blank" class="btn icon-edit improve">Improve this doc</a>
+
+            <%
+            var pageName = page.name;
+
+            if(pageName !== 'guide') {
+                pageName = 'guide/' + pageName;
+            }
+            %>
+
+            <a href="https://github.com/webdriverio/webdriver.io/edit/master/source/<%- pageName %>.md" target="_blank" class="btn icon-edit improve">Improve this doc</a>
         <% } %>
 
         <%- page.content %>
