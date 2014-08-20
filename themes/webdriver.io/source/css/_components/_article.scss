@@ -1,12 +1,25 @@
 article {
     ol {
-        list-style: initial;
-        list-style-type: decimal;
         margin: 10px 0;
 
         li {
             margin: 0 0 10px 20px;
             line-height: 1.3em;
+        }
+    }
+
+    &.single {
+        margin-top: 50px;
+
+        h1 {
+            padding-bottom: 20px;
+        }
+
+        ul {
+            list-style-type: inherit;
+        }
+        ol {
+            list-style-type: decimal;
         }
     }
 }
