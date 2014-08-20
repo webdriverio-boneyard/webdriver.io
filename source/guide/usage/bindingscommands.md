@@ -1,7 +1,7 @@
 name: bindingscommands
-category: using
+category: usage
 tags: guide
-index: 1
+index: 2
 ---
 
 Bindings & Commands
@@ -39,7 +39,7 @@ your tests to look more concise and expressive. So instead of doing this:
 ```js
 client.element('#myElem', function(err, res) {
     assert(err === null);
-   
+
     client.elementIdCssProperty(res.value.ELEMENT, 'width', function(err, res) {
         assert(err === null);
         assert(res.value === '100px');
@@ -77,9 +77,9 @@ client.getCssProperty('#myElem', 'width', function(err, width, responses) {
 
     /**
      * returns:
-     * 
-     * { 
-     *   elements: { 
+     *
+     * {
+     *   elements: {
      *     state: null,
      *     sessionId: 'f8b6e580-24e4-4686-8d95-9f87ab68d158',
      *     hCode: 1719905558,
@@ -87,7 +87,7 @@ client.getCssProperty('#myElem', 'width', function(err, width, responses) {
      *     class: 'org.openqa.selenium.remote.Response',
      *     status: 0
      *  },
-     *  elementIdCssProperty: [{ 
+     *  elementIdCssProperty: [{
      *     state: null,
      *     sessionId: 'f8b6e580-24e4-4686-8d95-9f87ab68d158',
      *     hCode: 1516567568,

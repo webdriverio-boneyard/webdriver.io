@@ -42,7 +42,7 @@ var currentPage = page.name;
         // sanitize categories
         var categories = {
             getstarted: 'Get Started',
-            using: 'Using WebdriverIO'
+            usage: 'Usage'
         };
 
         var pageNames = {
@@ -59,6 +59,7 @@ var currentPage = page.name;
         <% _.each(pages, function(page){ %><a href="/guide/<%- category %>/<%- page.name %>.html"<% if (currentPage === page.name) { %> class="active"<% } %>><%- pageNames[page.name] || page.name %></a><% }) %>
         </div>
     <% }) %>
+        <h3><a href="https://github.com/webdriverio/webdriverio/tree/master/examples" class="icon-folder-close-alt" target="_blank">Examples</a></h3>
     </nav>
 
     <article class="doc">

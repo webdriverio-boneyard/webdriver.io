@@ -1,7 +1,7 @@
 name: selectors
-category: using
+category: usage
 tags: guide
-index: 1
+index: 0
 ---
 
 Selectors

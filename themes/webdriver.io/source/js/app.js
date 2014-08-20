@@ -14,11 +14,15 @@ var App = function() {
 };
 
 App.prototype.openCommandList = function(e) {
-    e.preventDefault();
-
     var elem = $(e.target),
         category = elem.data('open'),
         commandList = $('.commands.' + category);
+
+    if(!category) {
+        return true;
+    }
+
+    e.preventDefault();
 
     window.test = elem;
 

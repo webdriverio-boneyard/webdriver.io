@@ -1,7 +1,7 @@
 name: customcommands
-category: using
+category: usage
 tags: guide
-index: 0
+index: 1
 ---
 
 custom commands
