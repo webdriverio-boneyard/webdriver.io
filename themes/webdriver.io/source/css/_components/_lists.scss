@@ -3,11 +3,16 @@ ul, ol {
 
     p {
         overflow: visible;
-        padding: 0;
     }
+}
+
+ul {
+    list-style-type: inherit;
+}
+ol {
+    list-style-type: decimal;
 }
 
 li {
     font-weight: 300;
 }
-

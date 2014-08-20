@@ -66,14 +66,20 @@ var currentPage = page.name;
         <% if(page.name) { %>
 
             <%
-            var pageName = page.name;
+            var file = page.name;
 
-            if(pageName !== 'guide') {
-                pageName = 'guide/' + pageName;
+            if(page.category) {
+                file = page.category + '/' + file;
             }
+
+            if(file !== 'guide') {
+                file = 'guide/' + file;
+            }
+
+            console.log(page.category);
             %>
 
-            <a href="https://github.com/webdriverio/webdriver.io/edit/master/source/<%- pageName %>.md" target="_blank" class="btn icon-edit improve">Improve this doc</a>
+            <a href="https://github.com/webdriverio/webdriver.io/edit/master/source/<%- file %>.md" target="_blank" class="btn icon-edit improve">Improve this doc</a>
         <% } %>
 
         <%- page.content %>
