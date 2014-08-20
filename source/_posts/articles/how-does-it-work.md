@@ -1,3 +1,4 @@
+layout: empty
 title: How does it work?
 tags: index
 class: col2

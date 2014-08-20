@@ -1,3 +1,4 @@
+layout: empty
 tags: teaser
 ---
 
