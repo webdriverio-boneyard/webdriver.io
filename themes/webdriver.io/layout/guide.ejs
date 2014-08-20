@@ -29,9 +29,8 @@ var currentPage = page.name;
     <nav class="apinav guide">
     <%
     var i = 0;
-    _.each(pageByCategoryOrdered, function(pages, category) { %>
+    _.each(pageByCategoryOrdered, function(pages, category) {
 
-        <%
         ++i;
 
         // order commands
@@ -55,17 +54,10 @@ var currentPage = page.name;
         var categoryName = categories[category] || category;
 
         %>
-
         <h3><a href="#" class="icon-folder-close-alt<% if (page.category === category || (i === 1 && currentPage === 'guide')) { %> active<% } %>" data-open="<%- category %>"><%- categoryName %></a></h3>
         <div class="commands <%- category %><% if (page.category === category || (i === 1 && currentPage === 'guide')) { %> active<% } %>">
-
-        <% _.each(pages, function(page){ %>
-
-            <a href="/guide/<%- category %>/<%- page.name %>.html"<% if (currentPage === page.name) { %> class="active"<% } %>><%- pageNames[page.name] || page.name %></a>
-
-        <% }) %>
+        <% _.each(pages, function(page){ %><a href="/guide/<%- category %>/<%- page.name %>.html"<% if (currentPage === page.name) { %> class="active"<% } %>><%- pageNames[page.name] || page.name %></a><% }) %>
         </div>
-
     <% }) %>
     </nav>
 
