@@ -63,9 +63,8 @@ var currentPage = page.name;
     </nav>
 
     <article class="doc">
-        <% if(page.name) { %>
+        <% if(page.name) {
 
-            <%
             var file = page.name;
 
             if(page.category) {
@@ -75,8 +74,6 @@ var currentPage = page.name;
             if(file !== 'guide') {
                 file = 'guide/' + file;
             }
-
-            console.log(page.category);
             %>
 
             <a href="https://github.com/webdriverio/webdriver.io/edit/master/source/<%- file %>.md" target="_blank" class="btn icon-edit improve">Improve this doc</a>
