@@ -105,3 +105,6 @@ marked:
     breaks: false
     smartLists: true
     smartypants: true
+
+alias:
+    docs.html: "http://webdriver.io/api.html"

@@ -3,6 +3,7 @@
   "version": "2.8.2",
   "private": true,
   "dependencies": {
+    "hexo-generator-alias": "^0.1.0",
     "hexo-renderer-ejs": "*",
     "hexo-renderer-marked": "*",
     "hexo-renderer-stylus": "*",
