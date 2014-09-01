@@ -11,10 +11,10 @@ lines of code. Your test code will look simple, concise and easy to read. Creati
 automated tests is as easy as:
 
 ```js
-var webdriverjs = require('webdriverjs');
+var webdriverio = require('webdriverio');
 var options = { desiredCapabilities: { browserName: 'chrome' } };
 
-webdriverjs
+webdriverio
     .remote(options)
     .init()
     .url('http://www.google.com')
