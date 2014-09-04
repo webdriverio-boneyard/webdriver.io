@@ -8,7 +8,7 @@ figure.highlight {
     border: 1px solid $highlight-border;
     border-radius: 4px 4px 3px 3px;
     margin: 10px 0;
-    overflow: scroll;
+    overflow: auto;
 
     figcaption {
         padding: 5px 10px;
@@ -32,11 +32,14 @@ figure.highlight {
 
     >table {
         display: block;
-        overflow: scroll;
+        overflow: auto;
     }
 
     .code {
         padding: 0 10px;
+        line-height: 18px;
+        display: block;
+        margin: 5px 0;
     }
 
     .comment, .template_comment, .diff .header, .javadoc {
