@@ -36,7 +36,7 @@ executable.
 
 ## Use of existing standalone package
 
-If you don't want to setup everything by yourself, you can also use on of the NPM selenium standalone
+If you don't want to setup everything by yourself, you can also use one of the NPM selenium standalone
 packages like: [vvo/selenium-standalone](https://github.com/vvo/selenium-standalone). After installing
 it (globally) you can run your server by executing:
 
