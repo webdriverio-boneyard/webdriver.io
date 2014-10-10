@@ -2,6 +2,7 @@ name: selectors
 category: usage
 tags: guide
 index: 0
+title: WebdriverIO - Selectors
 ---
 
 Selectors

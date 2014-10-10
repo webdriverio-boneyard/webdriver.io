@@ -1,6 +1,7 @@
 name: grunt-webdriver
 category: plugins
 tags: guide
+title: WebdriverIO - grunt-webdriver
 ---
 
 # grunt-webdriver [![Build Status](https://travis-ci.org/webdriverio/grunt-webdriver.png)](https://travis-ci.org/christian-bromann/grunt-webdriver)

@@ -2,9 +2,10 @@ name: customcommands
 category: usage
 tags: guide
 index: 1
+title: WebdriverIO - Custom Commands
 ---
 
-custom commands
+Custom Commands
 ===============
 
 If you want to extend the client with your own set of commands there is a method

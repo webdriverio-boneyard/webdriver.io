@@ -1,6 +1,7 @@
 name: webdriverjs-angular
 category: plugins
 tags: guide
+title: WebdriverIO - webdriverjs-angular
 ---
 
 # webdriverjs-angular <br>[![Build Status](https://travis-ci.org/webdriverio/webdriverjs-angular.png?branch=master)](https://travis-ci.org/webdriverio/webdriverjs-angular) [![Dependency Status](https://david-dm.org/webdriverio/webdriverjs-angular.png?theme=shields.io)](https://david-dm.org/webdriverio/webdriverjs-angular) [![devDependency Status](https://david-dm.org/webdriverio/webdriverjs-angular/dev-status.png?theme=shields.io)](https://david-dm.org/webdriverio/webdriverjs-angular#info=devDependencies)

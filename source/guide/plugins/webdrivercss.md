@@ -1,6 +1,7 @@
 name: webdrivercss
 category: plugins
 tags: guide
+title: WebdriverIO - WebdriverCSS
 ----
 
 WebdriverCSS [![Build Status](https://travis-ci.org/webdriverio/webdrivercss.png?branch=master)](https://travis-ci.org/webdriverio/webdrivercss) [![Coverage Status](https://coveralls.io/repos/webdriverio/webdrivercss/badge.png?branch=master)](https://coveralls.io/r/webdriverio/webdrivercss?branch=master)

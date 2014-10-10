@@ -2,6 +2,7 @@ name: bindingscommands
 category: usage
 tags: guide
 index: 2
+title: WebdriverIO - Bindings & Commands
 ---
 
 Bindings & Commands

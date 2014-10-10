@@ -2,6 +2,7 @@ name: install
 category: getstarted
 tags: guide
 index: 0
+title: WebdriverIO - Install
 ---
 
 # Install

@@ -1,6 +1,7 @@
 name: browserevent
 category: plugins
 tags: guide
+title: WebdriverIO - Browserevent
 ---
 
 Browserevent [![Build Status](https://travis-ci.org/webdriverio/browserevent.svg?branch=master)](https://travis-ci.org/webdriverio/browserevent)

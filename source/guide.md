@@ -1,5 +1,6 @@
 layout: guide
 name: guide
+title: WebdriverIO - Developer Guide
 ---
 
 # Developer Guide
