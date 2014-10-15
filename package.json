@@ -1,6 +1,6 @@
 {
   "name": "hexo-site",
-  "version": "2.8.3",
+  "version": "2.7.1",
   "private": true,
   "dependencies": {
     "hexo-generator-alias": "^0.1.0",
@@ -11,7 +11,8 @@
     "webdriverio": "*"
   },
   "scripts": {
-    "build": "npm run clean && npm install && npm run generate-markdown && npm run generate && npm run compass && npm run compress-css && npm run compress-js && npm run remove-obsoletes",
+    "build": "npm run clean && npm install && npm run generate-markdown && npm run generate && npm run compass && npm run compress-css && npm run compress-js && npm run remove-obsoletes && npm run webmastertools",
+    "webmastertools": " echo \"google-site-verification: googleb498eedc81b2abab.html\" > ./public/googleb498eedc81b2abab.html",
     "clean": "rm -r ./public ./source/api ./node_modules || exit 0",
     "generate": "hexo generate",
     "remove-obsoletes": "rm -r ./public/teaser ./public/articles ./public/css/config.rb ./public/css/screen.scss",
