@@ -1,4 +1,3 @@
-<% fragment_cache('head', function() { %>
 <!DOCTYPE html>
 <title><% if (page.title){ %><%= page.title %><% } else { %><%= config.title %><% } %></title>
 
@@ -11,4 +10,3 @@
 	<meta property="og:<%= property %>" content="<%= config.og[property] %>" /><% } %>
 
 <%- css('css/screen') %>
-<% }); %>
