@@ -16,7 +16,7 @@ folder first:
 
 ** 1. Create a simple test folder**
 ```sh
-$ mkdir webdriverjs-test && cd webdriverjs-test
+$ mkdir webdriverio-test && cd webdriverio-test
 ```
 
 Then let's download the current [selenium standalone server](http://docs.seleniumhq.org/download/) version:
@@ -36,7 +36,7 @@ $ java -jar selenium-server-standalone-2.43.1.jar
 Keep this running in the background and open a new terminal window. Next step is to download WebdriverIO via
 NPM:
 
-** 4. Download webdriverjs**
+** 4. Download WebdriverIO**
 ```sh
 $ npm install webdriverio
 ```

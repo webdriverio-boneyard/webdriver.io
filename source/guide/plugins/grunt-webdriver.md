@@ -186,7 +186,7 @@ your client instance. See more functions and test examples in the [WebdriverIO](
 
 var assert = require('assert');
 
-describe('grunt-webdriverjs test', function () {
+describe('grunt-webdriverio test', function () {
 
     it('checks if title contains the search query', function(done) {
 

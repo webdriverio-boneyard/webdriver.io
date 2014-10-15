@@ -6,7 +6,7 @@ class: col2
 
 ## How does it work?
 
-WebdriverJS is an open source testing utility for nodejs. It makes it possible
+WebdriverIO is an open source testing utility for nodejs. It makes it possible
 to write super easy selenium tests with Javascript in your favorite BDD or TDD
 test framework. Even Cucumber tests are supported.
 

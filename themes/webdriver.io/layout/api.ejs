@@ -57,10 +57,10 @@ var currentPage = page.name;
         <% if (currentPage !== 'api') { %>
 
             <%
-            sourcePath = 'https://github.com/camme/webdriverjs/edit/master/lib/' + dir + '/' + page.name + '.js';
+            sourcePath = 'https://github.com/webdriverio/webdriverio/edit/master/lib/' + dir + '/' + page.name + '.js';
             %>
 
-            <a href="https://github.com/camme/webdriverjs/blob/master/lib/<%- dir %>/<%- page.name %>.js" target="_blank" class="btn icon-search source">View Source</a>
+            <a href="https://github.com/webdriverio/webdriverio/blob/master/lib/<%- dir %>/<%- page.name %>.js" target="_blank" class="btn icon-search source">View Source</a>
         <% } %>
 
         <a href="<%- sourcePath %>" target="_blank" class="btn icon-edit improve">Improve this doc</a>
