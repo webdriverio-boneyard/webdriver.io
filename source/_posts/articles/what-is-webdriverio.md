@@ -1,6 +1,6 @@
 layout: empty
 title: What is WebdriverIO?
-tag: index
+tags: index
 class: whatis
 ---
 
