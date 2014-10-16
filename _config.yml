@@ -108,3 +108,8 @@ marked:
 
 alias:
     docs.html: "http://webdriver.io/api.html"
+
+sitemap:
+    path: sitemap.xml
+    post_changefreq: daily
+    post_priority: 0.8

@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "hexo-generator-alias": "^0.1.0",
+    "hexo-generator-sitemap": "git://github.com/christian-bromann/hexo-generator-sitemap.git#master",
     "hexo-renderer-ejs": "*",
     "hexo-renderer-marked": "*",
     "hexo-renderer-stylus": "*",
