@@ -23,7 +23,7 @@ Then let's download the current [selenium standalone server](http://docs.seleniu
 
 ** 2. Download selenium standalone server**
 ```sh
-$ curl -O http://selenium-release.storage.googleapis.com/2.42/selenium-server-standalone-2.43.1.jar
+$ curl -O http://selenium-release.storage.googleapis.com/2.43/selenium-server-standalone-2.43.1.jar
 ```
 
 Start the server by executing the following:
