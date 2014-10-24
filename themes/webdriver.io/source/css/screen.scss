@@ -45,20 +45,24 @@ html,body {
     line-height: 1.3em;
 }
 
-.runyourtests a {
-    font-size: 0;
-    color: transparent;
-    width: 31%;
-    display: block;
-    float: left;
-    margin: 0 1.5% 10px;
+.runyourtests {
+    float: right;
 
-    &[href="https://saucelabs.com"]              { @extend .sprite-sauce-labs-logo-sw; margin-left: 0; }
-    &[href="https://saucelabs.com"]:hover        { @extend .sprite-sauce-labs-logo }
-    &[href="http://www.browserstack.com/"]       { @extend .sprite-browserstack-logo-sw }
-    &[href="http://www.browserstack.com/"]:hover { @extend .sprite-browserstack-logo }
-    &[href="http://www.testingbot.com/"]         { @extend .sprite-testingbot-logo-sw; margin-bottom: 0; }
-    &[href="http://www.testingbot.com/"]:hover   { @extend .sprite-testingbot-logo }
+    a {
+        font-size: 0;
+        color: transparent;
+        width: 31%;
+        display: block;
+        float: left;
+        margin: 0 1.5% 10px;
+
+        &[href="https://saucelabs.com"]              { @extend .sprite-sauce-labs-logo-sw; margin-left: 0; }
+        &[href="https://saucelabs.com"]:hover        { @extend .sprite-sauce-labs-logo }
+        &[href="http://www.browserstack.com/"]       { @extend .sprite-browserstack-logo-sw }
+        &[href="http://www.browserstack.com/"]:hover { @extend .sprite-browserstack-logo }
+        &[href="http://www.testingbot.com/"]         { @extend .sprite-testingbot-logo-sw; margin-bottom: 0; }
+        &[href="http://www.testingbot.com/"]:hover   { @extend .sprite-testingbot-logo }
+    }
 }
 img[alt="TestingBot"] {
     margin-right: 0;
