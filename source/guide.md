@@ -7,7 +7,7 @@ title: WebdriverIO - Developer Guide
 
 Welcome to the WebdriverIO documentation. It will help you to get started fast. If you run into problems you can
 find help and answers in our [Google Group](https://groups.google.com/forum/#!forum/wdjs) or you can hit me on
-[Twitter](https://twitter.com/webdriverio). The following will give you a short step by step introductio to get
+[Twitter](https://twitter.com/webdriverio). The following will give you a short step by step introduction to get
 your first WebdriverIO script up and running.
 
 Lets suppose you've [Node.js](http://nodejs.org/) and Java already installed. First thing we need to do is to
