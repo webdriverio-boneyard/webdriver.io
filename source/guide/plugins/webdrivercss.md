@@ -4,17 +4,17 @@ tags: guide
 title: WebdriverIO - WebdriverCSS
 ----
 
-WebdriverCSS [![Build Status](https://travis-ci.org/webdriverio/webdrivercss.png?branch=master)](https://travis-ci.org/webdriverio/webdrivercss) [![Coverage Status](https://coveralls.io/repos/webdriverio/webdrivercss/badge.png?branch=master)](https://coveralls.io/r/webdriverio/webdrivercss?branch=master)
+WebdriverCSS [![Version](http://img.shields.io/badge/version-v1.0.0-brightgreen.svg)](https://www.npmjs.org/package/webdrivercss) [![Build Status](https://travis-ci.org/webdriverio/webdrivercss.png?branch=master)](https://travis-ci.org/webdriverio/webdrivercss) [![Coverage Status](https://coveralls.io/repos/webdriverio/webdrivercss/badge.png?branch=master)](https://coveralls.io/r/webdriverio/webdrivercss?branch=master)
 ============
 
-__CSS regression testing in WebdriverIO__. This plugin is an automatic regression-testing
+__CSS regression testing in WebdriverIO__. This plugin is an automatic visual regression-testing
 tool for [WebdriverIO](http://webdriver.io). It was inspired by [James Cryers](https://github.com/jamescryer)
 awesome project called [PhantomCSS](https://github.com/Huddle/PhantomCSS). After
 initialization it enhances a WebdriverIO instance with an additional command called
 `webdrivercss` and enables the possibility to save screenshots of specific parts of
 your application.
 
-#### Never lose track of unwanted CSS changes:
+#### Never loose track of unwanted CSS changes:
 
 ![alt text](http://webdriver.io/images/webdrivercss/hero.png "Logo Title Text 1")
 
@@ -31,6 +31,8 @@ your application.
 ### Example
 
 ```js
+var assert = require('assert');
+
 // init WebdriverIO
 var client = require('webdriverio').remote({desiredCapabilities:{browserName: 'chrome'}})
 // init WebdriverCSS
@@ -47,7 +49,11 @@ client
             name: 'hero'
             elem: '//*[@id="hero"]/div[2]'
         }
-    ])
+    ], function(err, res) {
+        assert.ifError(err);
+        assert.ok(res.header[0].isWithinMisMatchTolerance);
+        assert.ok(res.hero[0].isWithinMisMatchTolerance);
+    })
     .end();
 ```
 
@@ -82,6 +88,14 @@ $ npm install webdrivercss
 $ npm install webdriverio # if not already installed
 ```
 
+Make sure your `PKG_CONFIG_PATH` is set in your environment otherwise you won't be able to install `canvas`
+probably. That actual path to your pkgconfig might differ though.
+
+```sh
+# make sure that this path exists on your machine
+$ export PKG_CONFIG_PATH=/opt/X11/lib/pkgconfig
+```
+
 ## Setup
 
 To use this plugin just call the `init` function and pass the desired WebdriverIO instance
@@ -101,16 +115,9 @@ the `webdrivercss` command will be available only for this instance.
 * **screenWidth** `Numbers[]` ( default: *[]* )<br>
   if set all screenshots will be taken in different screen widths (e.g. for responsive design tests)
 
-The following options might be interesting if you want to syncronize your taken images with
-an external API. Checkout the [webdrivercss-adminpanel](https://github.com/webdriverio/webdrivercss-adminpanel)
-for more information on that.
+* **updateBaseline** `Boolean` ( default: *false* )<br>
+  updates baseline images if comparison keeps failing
 
-* **api** `String`
-  URL to API interface
-* **user** `String`
-  user name (only necessary if API requires Basic Authentification or oAuth)
-* **key** `String`
-  assigned user key (only necessary if API requires Basic Authentification or oAuth)
 
 ### Example
 
@@ -165,7 +172,7 @@ available:
   exclude frequently changing parts of your screenshot, you can either pass all kinds of different [WebdriverIO selector strategies](http://webdriver.io/guide/usage/selectors.html)
   that queries one or multiple elements or you can define x and y values which stretch a rectangle or polygon
 
-* **hide** `String`<br>
+* **hide** `String[]`<br>
   hides all elements queried by all kinds of different [WebdriverIO selector strategies](http://webdriver.io/guide/usage/selectors.html) (via `visibility: hidden`)
 
 The following paragraphs will give you a more detailed insight how to use these options properly.
@@ -177,6 +184,8 @@ with the captured screenshots or you could even break your integration test at t
 following example shows how to handle design breaks within integration tests:
 
 ```js
+var assert = require('assert');
+
 describe('my website should always look the same',function() {
 
     it('header should look the same',function(done) {
@@ -186,17 +195,70 @@ describe('my website should always look the same',function() {
                 name: 'header',
                 elem: '#header'
             }, function(err,res) {
-                assert.equal(err, null);
+                assert.ifError(err);
 
-                // this will break the test if screenshot differ more then 5% from
-                // the previous taken image
-                assert.equal(res.misMatchPercentage < 5, true);
+                // this will break the test if screenshot is not within the mismatch tolerance
+                assert.ok(res.isWithinMisMatchTolerance);
             })
             .call(done);
     });
 
     // ...
 ```
+
+### [Applitools Eyes](http://applitools.com) Support
+
+![Applitools Eyes](http://pravdam.biz/clientblogs/applitools2/applitools-new-logo.png)
+
+Applitools Eyes is a comprehensive automated UI validation solution with really smart image matching algorithms
+that are unique in this area. As a cloud service it makes your regression tests available everywhere and
+accessible to everyone in your team, and its automated maintenance features simplify baseline maintenance.
+
+In order to work with Applitools Eyes you need to sign up and obtain an API key. You can sign up for a
+free account [here](http://applitools.com/signup/).
+
+### Applitools Eyes Example
+
+```js
+var assert = require('assert');
+
+// create a WebdriverIO instance
+var client = require('webdriverio').remote({
+    desiredCapabilities: {
+        browserName: 'chrome'
+    }
+});
+
+// initialise WebdriverCSS for `client` instance
+require('webdrivercss').init(client, {
+    key: '<your personal API key>'
+});
+
+client
+    .init()
+    .url('http://example.com')
+    .webdrivercss('<app name>', {
+        name: '<test name>',
+        elem: '#someElement',
+        // ...
+    }, function(err, res) {
+        assert.ifError(err);
+        assert.equal(res.steps, res.strictMatches)
+    })
+    .end();
+```
+
+The following options might be interesting if you want to syncronize your taken images with
+an external API. Checkout the [webdrivercss-adminpanel](https://github.com/webdriverio/webdrivercss-adminpanel)
+for more information on that.
+
+* **api** `String`
+  URL to API interface
+* **user** `String`
+  user name (only necessary if API requires Basic Authentification or oAuth)
+* **key** `String`
+  assigned user key (only necessary if API requires Basic Authentification or oAuth)
+
 
 ### Define specific areas
 
@@ -393,12 +455,9 @@ It provides even a web interface for before/after comparison and stuff like this
 Please fork, add specs, and send pull requests! In lieu of a formal styleguide, take care to
 maintain the existing coding style.
 
-## Release History
+Default driver instance used for testing is [PhantomJS](https://github.com/ariya/phantomjs), so you need to either have
+it installed, or change it to your preferred driver (e.g., Firefox) in the `desiredCapabilities` in the `bootstrap.js`
+file under the `test` folder.
 
-* 2013-03-28   v0.1.0   first release
-* 2013-04-07   v0.1.1   convert screenWidth parameters into numbers
-* 2013-07-12   v0.2.0   implemented shot synchronization with an external API
-* 2013-07-13   v0.2.1   fixed scrollTo bug
-* 2013-07-15   v0.2.2   introduced `hide` option, remove local repository before download
-* 2013-07-17   v0.2.3   x-browser/driver-compatibility improvements
-* 2013-09-01   v0.3.0   make WebdriverCSS compatible with WebdriverIO
+You also need a web server to serve the "site" files and have the root folder set to "webdrivercss". We use the
+[http-server package](https://www.npmjs.org/package/http-server).
