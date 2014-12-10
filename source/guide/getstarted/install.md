@@ -16,7 +16,21 @@ $ npm install webdriverio
 
 ## Set up your Selenium environment
 
-To start with Selenium you have to run a selenium standalone server on your machine. You will get the newest
+There are two ways of setting up your Selenium environment: as a standalone package or by installing the server and browser driver separately.
+
+### Use of existing standalone package
+
+The simplest way to get started is to use one of the NPM selenium standalone
+packages like: [vvo/selenium-standalone](https://github.com/vvo/selenium-standalone). After installing
+it (globally) you can run your server by executing:
+
+```sh
+$ start-selenium
+```
+
+To install the Selenium Server and Chromedriver (if necessary) separately:
+
+First you must run a selenium standalone server on your machine. You will get the newest
 version [here](http://docs.seleniumhq.org/download/). Just download the jar file somewhere on your system.
 After that start your terminal and execute the file via
 
@@ -34,13 +48,3 @@ implements WebDriver's wire protocol for Chromium. It is being developed by memb
 WebDriver teams. For running Chrome browser tests on your local machine you need to download ChromeDriver
 from the project website and make it available on your machine by setting the PATH to the ChromeDriver
 executable.
-
-## Use of existing standalone package
-
-If you don't want to setup everything by yourself, you can also use one of the NPM selenium standalone
-packages like: [vvo/selenium-standalone](https://github.com/vvo/selenium-standalone). After installing
-it (globally) you can run your server by executing:
-
-```sh
-$ start-selenium
-```
