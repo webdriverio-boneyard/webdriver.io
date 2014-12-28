@@ -50,7 +50,7 @@ var currentPage = page.name;
     <article class="doc">
         <%
         if(page.name) {
-            var dir = page.category === 'protocol' ? 'protocol' : 'commands';
+            var dir = page.category === 'protocol' || page.category === 'appium' ? 'protocol' : 'commands';
             var sourcePath = 'https://github.com/webdriverio/webdriver.io/edit/master/source/api.md';
         %>
 
