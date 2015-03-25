@@ -10,7 +10,7 @@ find help and answers in our [Google Group](https://groups.google.com/forum/#!fo
 [Twitter](https://twitter.com/webdriverio). The following will give you a short step by step introduction to get
 your first WebdriverIO script up and running.
 
-Lets suppose you've [Node.js](http://nodejs.org/) and Java already installed. First thing we need to do is to
+Let's suppose you have [Node.js](http://nodejs.org/) and Java already installed. First thing we need to do is to
 start a selenium server that executes all selenium commands within the browser. To do so we create an example
 folder first:
 
