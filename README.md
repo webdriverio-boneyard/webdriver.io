@@ -10,7 +10,7 @@ To deploy the website to the server, you will need the following dependencies in
 - [NodeJS](http://nodejs.org/download/)
 - [SASS](http://sass-lang.com/install) (`gem install sass`)
 - [Compass](http://compass-style.org/install/) (`gem install compass`)
-- [Hexo](http://hexo.io/) (`npm install hexo -g`)
+- [Hexo](http://hexo.io/) (`npm install hexo@2.8 -g`)
 - [YUI compressor](http://www.andrew-kirkpatrick.com/2013/06/yahoo-yui-compressor-on-mac-os-x-terminal/) (`brew install yuicompressor`)
 
 ## Deployment
