@@ -6,7 +6,7 @@ var App = function() {
     };
 
     this.events = {
-        'click .apinav>h3>a': 'openCommandList',
+        'click .apinav.guide>h3>a': 'openCommandList',
         'click .navbar-toggle': 'openNavbar'
     };
 
