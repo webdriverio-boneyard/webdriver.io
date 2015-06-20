@@ -40,8 +40,8 @@ var currentPage = page.name;
         pages.sort(orderCommandName);
 
         %>
-        <h3><a href="#" class="icon-folder-close-alt<% if (page.category === category || (i === 1 && currentPage === 'api')) { %> active<% } %>" data-open="<%- category %>"><%- category %></a></h3>
-        <div class="commands <%- category %><% if (page.category === category || (i === 1 && currentPage === 'api')) { %> active<% } %>">
+        <h3><a href="#" class="icon-folder-close-alt" data-open="<%- category %>"><%- category %></a></h3>
+        <div class="commands <%- category %> active %>">
         <% _.each(pages, function(page){ %><a href="/api/<%- category %>/<%- page.name %>.html"<% if (currentPage === page.name) { %> class="active"<% } %>><%- page.name %></a><% }) %>
         </div>
     <% }) %>

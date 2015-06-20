@@ -1,6 +1,7 @@
 .DS_Store
 Thumbs.db
 db.json
+npm-debug.log
 debug.log
 node_modules/
 public/
