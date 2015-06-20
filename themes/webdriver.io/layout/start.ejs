@@ -16,24 +16,4 @@
     </div>
 </header>
 
-<aside class="teaser">
-<%
-var posts = get_posts({query:{tags: 'teaser'}});
-posts.forEach(function(post){ %>
-
-    <div class="teaserbox">
-        <%- post.content %>
-    </div>
-
-<% }) %>
-</aside>
-
-<%
-var posts = get_posts({order: 1, query:{tags: 'index'}});
-posts.forEach(function(post){ %>
-
-    <article class="<%- post.class %>">
-        <%- post.content %>
-    </article>
-
-<% }) %>
+<%- page.content %>

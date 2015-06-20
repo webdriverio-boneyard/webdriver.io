@@ -1,0 +1,33 @@
+.features {
+    overflow: hidden;
+    padding-bottom: 50px;
+
+    ul {
+        width: 50%;
+        float: left;
+        font-size: 20px;
+        line-height: 35px;
+        list-style: none;
+        margin: 0;
+    }
+
+    li:before {
+        content: "✓";
+        color: green;
+        font-weight: bold;
+        margin-right: 15px;
+    }
+}
+
+.plugins {
+    text-align: center;
+    padding-bottom: 50px;
+
+    h2 {
+        margin-bottom: 30px;
+    }
+
+    a {
+        margin: 0 20px;
+    }
+}
