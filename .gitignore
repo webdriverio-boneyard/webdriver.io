@@ -10,4 +10,5 @@ themes/landscape
 .sass-cache/
 themes/webdriver.io/source/css/screen.css
 source/api/
+source/**/*.md
 themes/webdriver.io/source/images/sprite-*
