@@ -32,7 +32,7 @@ layout: start
         <li>command line interface support</li>
     </ul>
     <ul>
-        <li>provides configuration tool</li>
+        <li>Visual Regression Test Integration</li>
         <li>different reporters made for async test caes</li>
         <li>selector chaining</li>
     </ul>
@@ -40,10 +40,11 @@ layout: start
 
 <div class="plugins">
     <h2 class="text-align">One Tool To Rule Them All:</h2>
-    <a href="https://github.com/webdriverio/grunt-webdriver"><img src="/images/plugins/grunt.png" alt="Grunt"></a>
-    <a href="https://github.com/webdriverio/gulp-webdriver"><img src="/images/plugins/gulp.png" alt="Gulp"></a>
-    <a href="https://packagecontrol.io/packages/WebdriverIO"><img src="/images/plugins/sublime.png" alt="Sublime Text"></a>
-    <a href="https://github.com/webdriverio/webdriverrtc"><img src="/images/plugins/webrtc.png" alt="WebRTC"></a>
+    <a href="https://github.com/webdriverio/grunt-webdriver"><img src="/images/plugins/grunt.png" alt="Grunt Integration"></a>
+    <a href="https://github.com/webdriverio/gulp-webdriver"><img src="/images/plugins/gulp.png" alt="Gulp Integration"></a>
+    <a href="https://packagecontrol.io/packages/WebdriverIO"><img src="/images/plugins/sublime.png" alt="Sublime Text Plugin"></a>
+    <a href="https://github.com/webdriverio/webdrivercss#applitools-eyes-support"><img src="/images/plugins/applitools.png" alt="Visual Regression Testing with Applitools Eyes"></a>
+    <a href="https://github.com/webdriverio/webdriverrtc"><img src="/images/plugins/webrtc.png" alt="WebRTC Analytics Plugin"></a>
 </div>
 
 
