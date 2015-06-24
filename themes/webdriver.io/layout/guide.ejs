@@ -20,7 +20,7 @@ Object.keys(pageByCategory).sort().forEach(function(key) {
 var currentPage = page.name;
 %>
 
-<section class="api">
+<section class="inner">
     <button class="navbar-toggle">
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
@@ -48,7 +48,9 @@ var currentPage = page.name;
         var pageNames = {
             v3: 'What is new?',
             bindingscommands: 'Bindings & Commands',
-            customcommands: 'Custom Commands'
+            customcommands: 'Custom Commands',
+            pageobjects: 'Page Objects',
+            transferpromises: 'Transfer Promises'
         }
 
         var categoryName = categories[category] || category;
@@ -76,7 +78,7 @@ var currentPage = page.name;
             }
             %>
 
-            <a href="https://github.com/webdriverio/webdriver.io/edit/master/source/<%- file %>.md" target="_blank" class="btn icon-edit improve">Improve this doc</a>
+            <a href="https://github.com/webdriverio/webdriverio/edit/master/docs/<%- file %>.md" target="_blank" class="btn icon-edit improve">Improve this doc</a>
         <% } %>
 
         <%- page.content %>

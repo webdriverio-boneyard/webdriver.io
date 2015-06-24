@@ -1,4 +1,4 @@
-.api {
+.inner {
     background: $white;
     border-radius: 5px;
     padding: 15px;
@@ -65,6 +65,45 @@
 
         ul li a {
             font-size: 0.9em;
+        }
+    }
+
+    &.searchbar {
+        padding: 5px 15px;
+        position: relative;
+
+        input {
+            width: 100%;
+            height: 40px;
+            border: 0;
+            color: $orange;
+            font-size: 24px;
+            font-family: $fontRegular;
+            font-weight: 300;
+            outline: none;
+        }
+
+        .icon-remove {
+            display: none;
+            position: absolute;
+            right: 15px;
+            top: 13px;
+            font-size: 0;
+            color: transparent;
+            text-decoration: none;
+            line-height: 10px;
+
+            &:before {
+                margin-top: 10px;
+                font-family: 'FontAwesome', sans-serif;
+                text-decoration: inherit;
+                display: block;
+                speak: none;
+                content: "\f00d";
+                font-size: 35px;
+                color: $orange;
+                cursor: pointer;
+            }
         }
     }
 }

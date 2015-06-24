@@ -2,14 +2,22 @@ var App = function() {
 
     this.ui = {
         body: $(document.body),
-        apinav: $('.apinav')
+        apinav: $('.apinav'),
+        apiLinks: $('.apinav .commands a'),
+        apiSections: $('.apinav h3 a'),
+        commandSection: $('.apinav .commands'),
+        clearLink: $('.searchbar a'),
+        searchInput: $('.searchbar input')
     };
 
     this.events = {
         'click .apinav.guide>h3>a': 'openCommandList',
-        'click .navbar-toggle': 'openNavbar'
+        'click .navbar-toggle': 'openNavbar',
+        'keyup .searchbar>input': 'filterApi',
+        'click .searchbar>a': 'clearQuery'
     };
 
+    this.fadeTime = 200;
     this.delegateEvents();
 };
 
@@ -32,7 +40,7 @@ App.prototype.openCommandList = function(e) {
     }
 
     $('.commands:visible').slideUp(function() {
-        $(this).removeClass('active')
+        $(this).removeClass('active');
     });
     $('.commands.' + category).slideToggle();
 
@@ -43,7 +51,44 @@ App.prototype.openCommandList = function(e) {
 App.prototype.openNavbar = function(e) {
     e.preventDefault();
     this.ui.apinav.slideToggle();
-}
+};
+
+App.prototype.clearQuery = function() {
+    this.ui.apiSections.show();
+    this.ui.apiLinks.show();
+    this.ui.searchInput.val('');
+    this.ui.clearLink.fadeOut(this.fadeTime);
+};
+
+App.prototype.filterApi = function(e) {
+    var query = $(e.target).val(),
+        self = this,
+        text, sectionName, heading;
+
+    this.ui.apiLinks.filter(function() {
+        text = $(this).text();
+        if(text.toLowerCase().indexOf(query.toLowerCase()) === -1) {
+            return $(this).hide();
+        }
+        return $(this).show();
+    });
+
+    this.ui.commandSection.each(function(i, section) {
+        sectionName = section.className.slice(9, -7);
+        heading = $(self.ui.apiSections.filter('[data-open="' + sectionName + '"]').get(0))
+        if($(section).find('a:visible').length) {
+            return heading.show();
+        }
+
+        heading.hide();
+    });
+
+    if(query === '') {
+        this.ui.clearLink.fadeOut(this.fadeTime);
+    } else {
+        this.ui.clearLink.fadeIn(this.fadeTime);
+    }
+};
 
 /**
  * delegate events to dom objects
