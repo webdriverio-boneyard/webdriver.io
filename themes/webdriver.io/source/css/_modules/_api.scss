@@ -5,6 +5,10 @@
     margin-top: 30px;
     overflow: hidden;
 
+    &.api {
+        margin-top: 10px;
+    }
+
     .doc {
         float: left;
         width: 74%;
