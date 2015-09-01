@@ -16,7 +16,7 @@
     "webmastertools": " echo \"google-site-verification: googleb498eedc81b2abab.html\" > ./public/googleb498eedc81b2abab.html",
     "clean": "rm -r ./public ./source/api ./node_modules || exit 0",
     "generate": "hexo generate",
-    "remove-obsoletes": "rm -r ./public/articles ./public/css/config.rb ./public/css/screen.scss",
+    "remove-obsoletes": "rm -r ./public/css/config.rb ./public/css/screen.scss",
     "compress-css": "yuicompressor ./public/css/screen.css > ./public/css/tmp.css && mv ./public/css/tmp.css ./public/css/screen.css",
     "compress-js": "yuicompressor ./public/js/app.js -o ./public/js/tmp.js && mv ./public/js/tmp.js ./public/js/app.js",
     "compass": "rm themes/webdriver.io/source/css/screen.css && cd themes/webdriver.io/source/css && compass compile && cd ../../../../",
