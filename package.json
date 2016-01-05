@@ -3,11 +3,14 @@
   "version": "2.8.3",
   "private": true,
   "dependencies": {
+    "hexo": "^3.1.1",
+    "hexo-deployer-s3": "^0.1.0",
     "hexo-generator-alias": "^0.1.0",
     "hexo-generator-sitemap": "git://github.com/christian-bromann/hexo-generator-sitemap.git#master",
-    "hexo-renderer-ejs": "*",
-    "hexo-renderer-marked": "0.1.x",
-    "hexo-renderer-stylus": "*",
+    "hexo-renderer-ejs": "^0.1.0",
+    "hexo-renderer-marked": "^0.2.6",
+    "hexo-renderer-stylus": "^0.3.0",
+    "hexo-server": "^0.1.2",
     "wddoc": "*",
     "webdriverio": "*"
   },
@@ -24,5 +27,8 @@
     "generate-markdown": "mkdir ./source/api && npm run generate-protocol-commands && npm run generate-action-commands",
     "generate-protocol-commands": "./node_modules/.bin/wddoc -i ./node_modules/webdriverio/lib/protocol/**/*.js -o ./source/api -t ./node_modules/wddoc/templates/template.md.ejs",
     "generate-action-commands": "./node_modules/.bin/wddoc -i ./node_modules/webdriverio/lib/commands/**/*.js -o ./source/api -t ./node_modules/wddoc/templates/template.md.ejs"
+  },
+  "hexo": {
+    "version": "3.1.1"
   }
 }

@@ -95,7 +95,10 @@ exclude_generator:
 # Deployment
 ## Docs: http://hexo.io/docs/deployment.html
 deploy:
-  type:
+  type: s3
+  bucket: webdriver.io
+  concurrency: 30
+  region: eu-west-1
 
 marked:
     gfm: true
