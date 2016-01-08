@@ -25,7 +25,7 @@ Next install dependencies:
 
 ```sh
 $ npm install -g hexo-cli
-$ npm install hexo-wdio-generator
+$ npm install hexo hexo-wdio-generator
 $ hexo wdio install
 ```
 
@@ -64,4 +64,4 @@ Last but not least let the domain point to this directory. That's it.
 
 ### When I start the server I get a 404 page `Cannot GET /`
 Make sure you have the documentation content copied into the source directory. We keep all documentation
-within the main repository ([github.com/webdriverio/webdriverio](https://github.com/webdriverio/webdriverio/docs)). Just run `npm run copy-docs` and restart the server.
+within the main repository ([github.com/webdriverio/webdriverio](https://github.com/webdriverio/webdriverio/docs)). Just run `hexo wdio getDocs` and restart the server.
