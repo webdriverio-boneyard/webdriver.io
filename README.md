@@ -25,19 +25,20 @@ Next install dependencies:
 
 ```sh
 $ npm install -g hexo-cli
-$ npm install
+$ npm install hexo-wdio-generator
+$ hexo wdio install
 ```
 
 Now grab the documentation content from the main repository
 
 ```sh
-$ npm run copy-docs
+$ hexo wdio getDocs
 ```
 
 and generate the assets using Compass
 
 ```sh
-$ npm run compass
+$ hexo wdio compass
 ```
 
 That's it. You can now run the server with:
