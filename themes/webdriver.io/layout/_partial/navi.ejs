@@ -1,16 +1,32 @@
 <% fragment_cache('navi', function() { %>
 <nav class="mainnav">
-    <ul>
-        <li><a href="/"><h1 class="logo">I/O</h1></a></li>
-        <li><a href="/">Home</a></li>
-        <li><a href="/guide.html">Developer Guide</a></li>
-        <li><a href="/api.html">API</a></li>
-        <li><a href="/contribute.html">Contribute</a></li>
-        <li style="float: right; padding-top: 6px;">
-          <a href="https://github.com/webdriverio/webdriverio/" target="_blank">
-            <img src="/images/github-logo.png" alt="Link to GitHub">
-          </a>
-        </li>
-    </ul>
+  <ul>
+    <li><a href="/"><h1 class="logo">I/O</h1></a></li>
+    <li><a href="/">Home</a></li>
+    <li><a href="/guide.html">Developer Guide</a></li>
+    <li><a href="/api.html">API</a></li>
+    <li><a href="/contribute.html">Contribute</a></li>
+    <li style="float: right; padding-top: 6px;">
+      <a href="https://github.com/webdriverio/webdriverio/" target="_blank">
+        <img src="/images/github-logo.png" alt="Link to GitHub">
+      </a>
+    </li>
+    <li style="float:right;">
+      <div class="dropdown">
+        <button class="btn btn-default dropdown-toggle" type="button">
+          API Version
+          <span class="caret"></span>
+        </button>
+        <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+          <%
+          _.each(config.wdio.builds, function(build) {
+            %><li><a href="/<%- build.apiVersion %>/<%- path %>"><%- build.apiVersion %></a></li><%
+          })
+          %>
+          <li><a href="/<%- path.replace(/v\d\.\d\//, '') %>">Latest</a></li>
+        </ul>
+      </div>
+    </li>
+  </ul>
 </nav>
 <% }); %>

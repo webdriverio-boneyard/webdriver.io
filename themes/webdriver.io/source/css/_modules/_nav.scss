@@ -22,6 +22,14 @@
         line-height: 0.9em;
     }
 
+    button {
+        margin: 15px;
+        border: $orange 1px solid;
+        border-radius: 5px;
+        background: $headerBackground;
+        color: $orange;
+    }
+
     ul {
         width: $pageWidth;
         margin: 0 auto;
