@@ -1,6 +1,7 @@
 <%
 var pageByCategory = {},
-    pageByCategoryOrdered = {};
+    pageByCategoryOrdered = {},
+    isOlderAPI = path[0] === 'v';
 
 site.pages.each(function(page) {
 
@@ -10,7 +11,13 @@ site.pages.each(function(page) {
         pageByCategory[page.category] = [];
     }
 
-    pageByCategory[page.category].push(page);
+    /**
+     * check if paths are the same
+     * seperate subversion commands with current page
+     */
+    if(path.slice(0, 4) === page.path.slice(0, 4)) {
+        pageByCategory[page.category].push(page);
+    }
 });
 
 Object.keys(pageByCategory).sort().forEach(function(key) {
@@ -47,14 +54,14 @@ var currentPage = page.name;
         %>
         <h3><a href="#" class="icon-folder-close-alt" data-open="<%- category %>"><%- category %></a></h3>
         <div class="commands <%- category %> active">
-        <% _.each(pages, function(page){ %><a href="/api/<%- category %>/<%- page.name %>.html"<% if (currentPage === page.name) { %> class="active"<% } %>><%- page.name %></a><% }) %>
+        <% _.each(pages, function(page){ %><a href="/<%- page.path %>"<% if (currentPage === page.name) { %> class="active"<% } %>><%- page.name %></a><% }) %>
         </div>
     <% }) %>
     </nav>
 
     <article class="doc">
         <%
-        if(page.name) {
+        if(page.name && !isOlderAPI) {
             var dir = page.category === 'protocol' || page.category === 'appium' ? 'protocol' : 'commands';
             var sourcePath = 'https://github.com/webdriverio/webdriver.io/edit/master/source/api.md';
         %>
