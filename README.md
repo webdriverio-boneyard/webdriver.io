@@ -25,8 +25,7 @@ Next install dependencies:
 
 ```sh
 $ npm install -g hexo-cli
-$ npm install hexo hexo-wdio-generator
-$ hexo wdio install
+$ npm install
 ```
 
 Now grab the documentation content from the main repository
