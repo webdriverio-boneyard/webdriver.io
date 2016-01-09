@@ -83,14 +83,10 @@ time_format: H:mm:ss
 per_page: 10
 pagination_dir: page
 
-# Disqus
-disqus_shortname:
-
 # Extensions
 ## Plugins: https://github.com/tommy351/hexo/wiki/Plugins
 ## Themes: https://github.com/tommy351/hexo/wiki/Themes
 theme: webdriver.io
-exclude_generator:
 
 # Deployment
 ## Docs: http://hexo.io/docs/deployment.html
