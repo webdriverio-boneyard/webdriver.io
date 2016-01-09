@@ -96,6 +96,29 @@ deploy:
   concurrency: 30
   region: eu-west-1
 
+wdio:
+  builds:
+    - apiVersion: v3.0
+      webdriverio: v3.0
+      website: v3.0.0
+      wddoc: v0.3.2
+    - apiVersion: v3.1
+      webdriverio: v3.1
+      website: v3.0.0
+      wddoc: v0.3.2
+    - apiVersion: v3.2
+      webdriverio: v3.2
+      website: v3.0.0
+      wddoc: v0.3.2
+    - apiVersion: v3.3
+      webdriverio: v3.3
+      website: v3.0.0
+      wddoc: v0.3.2
+    - apiVersion: v3.3
+      webdriverio: v3.3
+      website: v3.0.0
+      wddoc: v0.3.2
+
 marked:
     gfm: true
     pedantic: false
