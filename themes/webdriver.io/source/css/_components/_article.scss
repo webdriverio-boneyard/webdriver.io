@@ -1,4 +1,6 @@
 article {
+    font-weight: 300;
+
     ol {
         margin: 10px 0;
 
@@ -14,5 +16,9 @@ article {
         h1 {
             padding-bottom: 20px;
         }
+    }
+
+    figure.highlight {
+        margin: 0;
     }
 }
