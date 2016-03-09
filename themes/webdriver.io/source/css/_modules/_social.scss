@@ -17,3 +17,34 @@ header .fb-like {
     position: relative;
     bottom: 4px;
 }
+
+.testimonials {
+    height: 175px;
+
+    .testimonial {
+        overflow: hidden;
+        margin: 30px 100px;
+
+        > .avatar {
+            overflow: hidden;
+            position: relative;
+            display: block;
+            width: 75px;
+            float: left;
+
+            > img {
+                border-radius: 100%;
+                width: 100%;
+            }
+        }
+
+        .text {
+            width: 75%;
+            margin-left: 100px;
+            background: lightgray;
+            padding: 20px;
+            border-radius: 20px;
+            font-weight: 300;
+        }
+    }
+}
