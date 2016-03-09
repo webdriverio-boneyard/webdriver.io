@@ -19,32 +19,42 @@ header .fb-like {
 }
 
 .testimonials {
-    height: 175px;
+    height: 220px;
 
     .testimonial {
-        overflow: hidden;
-        margin: 30px 100px;
+        margin: 85px 100px;
 
         > .avatar {
             overflow: hidden;
-            position: relative;
             display: block;
-            width: 75px;
+            width: 100px;
             float: left;
+            position: relative;
+            left: 45px;
+            bottom: 55px;
 
             > img {
                 border-radius: 100%;
-                width: 100%;
+                width: 90%;
+                border: 2px solid $orange;
+                background-color: $white;
             }
         }
 
         .text {
             width: 75%;
             margin-left: 100px;
-            background: lightgray;
-            padding: 20px;
+            background: $orange;
+            padding: 20px 40px;
             border-radius: 20px;
             font-weight: 300;
+            font-size: 20px;
+            line-height: 32px;
+            color: $white;
+
+            a {
+              color: $white;
+            }
         }
     }
 }

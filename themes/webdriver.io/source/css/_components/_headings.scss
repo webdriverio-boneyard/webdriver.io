@@ -17,6 +17,10 @@ h2 {
     margin: 30px 0 10px;
     font-weight: 300;
     font-size: $h2Size;
+
+    &.right-col-heading {
+        margin: 0 0 10px;
+    }
 }
 
 h3 {

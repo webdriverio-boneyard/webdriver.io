@@ -50,7 +50,7 @@ html,body {
 .runyourtests {
     float: right;
 
-    a {
+    > div > p > a {
         font-size: 0;
         color: transparent;
         width: 31%;
