@@ -1,7 +1,8 @@
 <%
 var pageByCategory = {},
     pageByCategoryOrdered = {},
-    isOlderAPI = path[0] === 'v';
+    isOlderAPI = path[0] === 'v',
+    categoriesOrdered = ['getstarted', 'usage', 'testrunner', 'plugins'];
 
 site.pages.each(function(page) {
 
@@ -20,7 +21,11 @@ site.pages.each(function(page) {
     }
 });
 
-Object.keys(pageByCategory).sort().forEach(function(key) {
+var compare = function (a, b) {
+    return categoriesOrdered.indexOf(a) > categoriesOrdered.indexOf(b);
+}
+
+Object.keys(pageByCategory).sort(compare).forEach(function(key) {
     pageByCategoryOrdered[key] = pageByCategory[key];
 });
 
