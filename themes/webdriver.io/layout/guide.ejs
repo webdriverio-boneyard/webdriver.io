@@ -2,7 +2,7 @@
 var pageByCategory = {},
     pageByCategoryOrdered = {},
     isOlderAPI = path[0] === 'v',
-    categoriesOrdered = ['getstarted', 'usage', 'testrunner', 'plugins'];
+    categoriesOrdered = ['getstarted', 'usage', 'testrunner', 'reporters', 'services']; //, 'plugins'];
 
 site.pages.each(function(page) {
 
@@ -59,6 +59,7 @@ var currentPage = page.name;
 
         var pageNames = {
             v3: 'What is new?',
+            'standalone-vs-wdio': 'Standalone vs. WDIO',
             bindingscommands: 'Bindings & Commands',
             customcommands: 'Custom Commands',
             pageobjects: 'Page Objects',
