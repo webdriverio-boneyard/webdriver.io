@@ -20,10 +20,10 @@
         <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
           <%
           _.each(config.wdio.builds, function(build) {
-            %><li><a href="/<%- build.apiVersion %>/<%- path.replace(/v\d\.\d+\//, '') %>"><%- build.apiVersion %></a></li><%
+            %><li><a href="/<%- build.apiVersion %>/<%- path.replace(/v\d\.\d+\//, '').replace(/\.html/g, '').split('/')[0] %>.html"><%- build.apiVersion %></a></li><%
           })
           %>
-          <li><a href="/<%- path.replace(/v\d\.\d\//, '') %>">Latest</a></li>
+          <li><a href="/<%- path.replace(/v\d\.\d\//, '').replace(/\.html/g, '').split('/')[0] %>.html">Latest</a></li>
         </ul>
       </div>
     </li>
