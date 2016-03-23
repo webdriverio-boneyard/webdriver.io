@@ -19,6 +19,10 @@ article {
     }
 
     figure.highlight {
-        margin: 0;
+        margin: 20px 0;
+    }
+
+    figure.highlight + figure.highlight {
+        margin: 0 0 20px;
     }
 }

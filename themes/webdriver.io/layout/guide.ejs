@@ -29,6 +29,7 @@ Object.keys(pageByCategory).sort(compare).forEach(function(key) {
     pageByCategoryOrdered[key] = pageByCategory[key];
 });
 
+delete pageByCategoryOrdered.plugins
 var currentPage = page.name;
 %>
 
@@ -80,7 +81,7 @@ var currentPage = page.name;
         <h3><a href="https://github.com/webdriverio/webdriverio/tree/master/examples" class="icon-folder-close-alt" target="_blank">Examples</a></h3>
     </nav>
 
-    <article class="doc">
+    <article class="doc guide">
         <% if(page.name && !isOlderAPI) {
 
             var file = page.name;
