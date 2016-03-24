@@ -25,4 +25,8 @@ article {
     figure.highlight + figure.highlight {
         margin: 0 0 20px;
     }
+
+    &.standalone figure.highlight {
+        margin: 0;
+    }
 }

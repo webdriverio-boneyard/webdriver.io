@@ -191,7 +191,8 @@ App.prototype.filterApi = function(e) {
 };
 
 App.prototype.generateTestimonial = function () {
-    var data = testimonials[Math.round(Math.random() * testimonials.length)];
+    var rand = Math.random() * testimonials.length;
+    var data = testimonials[Math.round(rand)];
     var avatar = $('<img />').attr('src', data.avatar);
     var link = $('<a />').attr('href', data.url).addClass('avatar').append(avatar);
     var user = $('<a />').attr('href', data.ref).html(data.name);
@@ -209,7 +210,9 @@ App.prototype.initTestimonials = function () {
 App.prototype.switchTestimonial = function () {
     var testimonial = this.generateTestimonial();
     var oldTestimonial = $('.testimonials > .testimonial');
-    oldTestimonial.replaceWith(testimonial);
+    testimonial.find('img').load(function() {
+        oldTestimonial.replaceWith(testimonial);
+    })
 }
 
 /**

@@ -62,8 +62,8 @@ var currentPage = page.name;
     <article class="doc">
         <%
         if(page.name && !isOlderAPI) {
-            var dir = page.category === 'protocol' || page.category === 'mobile' ? 'protocol' : 'commands';
-            var sourcePath = 'https://github.com/webdriverio/webdriver.io/edit/master/source/api.md';
+            var dir = page.category === 'protocol' || (page.category === 'mobile' && page.content.indexOf('Uses') < 0) ? 'protocol' : 'commands';
+            var sourcePath = 'https://github.com/webdriverio/webdriverio/edit/master/docs/api.md';
         %>
 
         <% if (currentPage !== 'api') { %>
