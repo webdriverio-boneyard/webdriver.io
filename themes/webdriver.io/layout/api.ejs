@@ -15,7 +15,7 @@ site.pages.each(function(page) {
      * check if paths are the same
      * seperate subversion commands with current page
      */
-    if(path.slice(0, 4) === page.path.slice(0, 4)) {
+    if(page.path[0] !== 'v' || path.slice(0, 4) === page.path.slice(0, 4)) {
         pageByCategory[page.category].push(page);
     }
 });
@@ -62,16 +62,14 @@ var currentPage = page.name;
     <article class="doc">
         <%
         if(page.name && !isOlderAPI) {
-            var dir = page.category === 'protocol' || page.category === 'appium' ? 'protocol' : 'commands';
+            var dir = page.category === 'protocol' || page.category === 'mobile' ? 'protocol' : 'commands';
             var sourcePath = 'https://github.com/webdriverio/webdriver.io/edit/master/source/api.md';
         %>
 
         <% if (currentPage !== 'api') { %>
-
             <%
             sourcePath = 'https://github.com/webdriverio/webdriverio/edit/master/lib/' + dir + '/' + page.name + '.js';
             %>
-
             <a href="https://github.com/webdriverio/webdriverio/blob/master/lib/<%- dir %>/<%- page.name %>.js" target="_blank" class="btn icon-search source">View Source</a>
         <% } %>
 
