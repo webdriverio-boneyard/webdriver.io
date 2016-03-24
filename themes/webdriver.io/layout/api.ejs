@@ -51,6 +51,10 @@ var currentPage = page.name;
         }
         pages.sort(orderCommandName);
 
+        if (pages.length === 0) {
+          return;
+        }
+
         %>
         <h3><a href="#" class="icon-folder-close-alt" data-open="<%- category %>"><%- category %></a></h3>
         <div class="commands <%- category %> active">
