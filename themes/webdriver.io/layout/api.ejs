@@ -15,7 +15,8 @@ site.pages.each(function(page) {
      * check if paths are the same
      * seperate subversion commands with current page
      */
-    if(page.path[0] !== 'v' || path.slice(0, 4) === page.path.slice(0, 4)) {
+    if ((page.path.slice(0, 4).match(/v\d\.\d/) && path.slice(0, 4) === page.path.slice(0, 4)) ||
+        (!page.path.slice(0, 4).match(/v\d\.\d/) && !path.slice(0, 4).match(/v\d\.\d/))) {
         pageByCategory[page.category].push(page);
     }
 });
