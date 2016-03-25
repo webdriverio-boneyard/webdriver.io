@@ -204,7 +204,7 @@ App.prototype.generateTestimonial = function () {
 App.prototype.initTestimonials = function () {
     var testimonial = this.generateTestimonial();
     this.ui.testimonials.html(testimonial);
-    setInterval(this.switchTestimonial.bind(this), 8000);
+    // setInterval(this.switchTestimonial.bind(this), 8000);
 }
 
 App.prototype.switchTestimonial = function () {
