@@ -2,7 +2,7 @@
 var pageByCategory = {},
     pageByCategoryOrdered = {},
     isOlderAPI = path[0] === 'v',
-    categoriesOrdered = ['getstarted', 'usage', 'testrunner', 'reporters', 'services']; //, 'plugins'];
+    categoriesOrdered = ['getstarted', 'usage', 'testrunner', 'reporters', 'services', 'plugins'];
 
 site.pages.each(function(page) {
 
@@ -29,7 +29,6 @@ Object.keys(pageByCategory).sort(compare).forEach(function(key) {
     pageByCategoryOrdered[key] = pageByCategory[key];
 });
 
-delete pageByCategoryOrdered.plugins
 var currentPage = page.name;
 %>
 
@@ -60,10 +59,14 @@ var currentPage = page.name;
 
         var pageNames = {
             v3: 'What is new?',
-            'standalone-vs-wdio': 'Standalone vs. WDIO',
+            v4: 'What is new?',
+            modes: 'Standalone vs. WDIO',
+            upgrade: 'Upgrade Version',
+            cloudservices: 'Cloud Services',
             bindingscommands: 'Bindings & Commands',
             customcommands: 'Custom Commands',
-            pageobjects: 'Page Objects',
+            pageobjects: 'Pageobject Pattern',
+            'selenium-standalone': 'selenium standalone',
             transferpromises: 'Transfer Promises',
             configurationfile: 'Configuration File',
             gettingstarted: 'Getting Started',
