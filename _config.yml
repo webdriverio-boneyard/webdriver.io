@@ -99,13 +99,13 @@ deploy:
 wdio:
   builds:
     - apiVersion: v3.4
-      webdriverio: v3.4
+      webdriverio: 3.4.0
       wddoc: v0.3.2
     - apiVersion: v4.0
-      webdriverio: v4.0.9
+      webdriverio: 4.0.9
       wddoc: v0.3.4
     - apiVersion: v4.1
-      webdriverio: v4.1.1
+      webdriverio: 4.1.1
       wddoc: v0.3.4
 
 marked:
