@@ -14,7 +14,7 @@
     "hexo-renderer-marked": "^0.2.6",
     "hexo-renderer-stylus": "^0.3.0",
     "hexo-server": "^0.1.2",
-    "hexo-wdio-generator": "~0.1.4"
+    "hexo-wdio-generator": "~0.1.5"
   },
   "hexo": {
     "version": "3.2.2"
