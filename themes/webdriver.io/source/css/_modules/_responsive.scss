@@ -119,6 +119,12 @@
     }
 }
 
+@media only screen and (max-width: 784px) {
+    .algolia-autocomplete {
+        display: none;
+    }
+}
+
 @media only screen and (max-width: 750px) {
 
     .links {

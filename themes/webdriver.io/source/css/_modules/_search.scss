@@ -1,0 +1,44 @@
+.algolia-autocomplete {
+    line-height: 50px;
+}
+
+#docsearch {
+    position: relative;
+}
+
+#docsearch input {
+    vertical-align: initial !important;
+    height: 30px;
+    border-radius: 15px;
+    box-sizing: border-box;
+    outline: none;
+    border: 1px solid #ea5906;
+    background: rgba(0, 0, 0, .5);
+    color: #ea5906;
+    padding: 0 15px 0 30px;
+    width: 150px;
+}
+
+#docsearch input::-webkit-input-placeholder {
+    color: #ea5906;
+    opacity: .5;
+}
+
+#docsearch input::-moz-placeholder {
+    color: #ea5906;
+    opacity: .5;
+}
+
+#docsearch input:-ms-input-placeholder {
+    color: #ea5906;
+    opacity: .5;
+}
+
+#docsearch {
+    .icon-search {
+        position: absolute;
+        color: #ea5906;
+        top: 16px;
+        left: 5px;
+    }
+}
