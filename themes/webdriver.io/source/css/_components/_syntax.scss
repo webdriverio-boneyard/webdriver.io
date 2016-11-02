@@ -30,6 +30,10 @@ figure.highlight {
         line-height: $highlight-line-height;
     }
 
+    .line:empty {
+      height: 18px;
+    }
+
     >table {
         display: block;
         overflow: auto;
