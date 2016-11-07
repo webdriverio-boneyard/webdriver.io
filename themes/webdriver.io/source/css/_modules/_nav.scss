@@ -30,15 +30,15 @@
         color: $orange;
     }
 
-    ul {
+    > ul {
         max-width: $pageWidth;
         margin: 0 auto;
         list-style: none;
 
-        li {
+        > li {
             float: left;
 
-            a {
+            > a {
                 margin: 0 10px;
                 text-decoration: none;
                 line-height: 50px;

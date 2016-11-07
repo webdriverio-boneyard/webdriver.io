@@ -12,6 +12,8 @@
 @import "_utils/fonts";
 @import "_utils/sprites";
 
+@import "_vendor/docsearch/docsearch";
+
 // import components
 @import "_components/container";
 @import "_components/columns";
@@ -26,6 +28,7 @@
 
 // import modules
 @import "_modules/header";
+@import "_modules/search";
 @import "_modules/social";
 @import "_modules/footer";
 @import "_modules/teaser";

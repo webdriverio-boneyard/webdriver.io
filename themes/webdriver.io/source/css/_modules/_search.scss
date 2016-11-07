@@ -1,0 +1,43 @@
+#docsearch {
+    position: relative;
+    margin-top: 10px;
+
+    input {
+        vertical-align: 3px !important;
+        height: 30px;
+        border-radius: 15px;
+        box-sizing: border-box;
+        outline: none;
+        border: 1px solid #ea5906;
+        background: rgba(0, 0, 0, .5);
+        color: #ea5906;
+        padding: 0 15px 0 30px;
+        width: 150px;
+
+        @include input-placeholder {
+            color: inherit;
+            opacity: .5;
+        }
+    }
+
+    .icon-search {
+        position: absolute;
+        color: #ea5906;
+        top: 5px;
+        left: 7px;
+    }
+}
+
+.algolia-autocomplete {
+    .ds-dropdown-menu {
+        [class^=ds-dataset], &:before {
+            background-clip: padding-box;
+        }
+    }
+
+    .algolia-docsearch-suggestion.algolia-docsearch-suggestion__secondary {
+        .algolia-docsearch-suggestion--subcategory-column {
+            // white-space: nowrap;
+        }
+    }
+}
