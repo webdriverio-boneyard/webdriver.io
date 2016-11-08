@@ -68,6 +68,10 @@ html,body {
         &[href="http://www.testingbot.com/"]         { @extend .sprite-testingbot-logo-sw; margin-bottom: 0; }
         &[href="http://www.testingbot.com/"]:hover   { @extend .sprite-testingbot-logo }
     }
+
+    figure.highlight {
+        margin: 0!important;
+    }
 }
 img[alt="TestingBot"] {
     margin-right: 0;
