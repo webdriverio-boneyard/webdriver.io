@@ -110,6 +110,9 @@ wdio:
     - apiVersion: v4.2
       webdriverio: 4.2.16
       wddoc: v0.3.4
+    - apiVersion: v4.3
+      webdriverio: 4.3.0
+      wddoc: v0.3.4
 
 marked:
   gfm: true
