@@ -23,11 +23,13 @@
     }
 
     button {
-        margin: 15px;
+        margin: 10px 15px;
         border: $orange 1px solid;
         border-radius: 5px;
         background: $headerBackground;
         color: $orange;
+        height: 30px;
+        padding: 0 20px;
     }
 
     > ul {
