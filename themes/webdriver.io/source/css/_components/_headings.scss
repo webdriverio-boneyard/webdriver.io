@@ -53,3 +53,26 @@ h6 {
     padding: 10px 0 0;
     font-weight: bold;
 }
+
+.doc {
+    h2, h3, h4, h5, h6 {
+        position: relative;
+
+        .headerlink {
+            display: none;
+            position: absolute;
+            right: 100%;
+            padding: 1px 3px;
+            font-size: .8em;
+            text-decoration: none;
+
+            &::before {
+                content: '#';
+            }
+        }
+
+        &:hover .headerlink {
+            display: inline;
+        }
+    }
+}
