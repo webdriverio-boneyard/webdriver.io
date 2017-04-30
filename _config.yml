@@ -3,9 +3,9 @@
 ## Source: https://github.com/tommy351/hexo/
 
 # Site
-title: WebdriverIO - Webdriver bindings for Node.js
-subtitle: Webdriver bindings for Node.js
-description: A Node.js bindings implementation for the W3C Webdriver protocol.
+title: WebdriverIO - WebDriver bindings for Node.js
+subtitle: WebDriver bindings for Node.js
+description: A Node.js bindings implementation for the W3C WebDriver protocol.
 author: Christian Bromann
 email: mail@christian-bromann.com
 language: en-EN
@@ -27,9 +27,9 @@ public_dir: public
 # FB open graph
 og:
     image: http://webdriver.io/images/webdriver-robot-with-dots.png
-    title: WebdriverIO - Webdriver bindings for Node.js
+    title: WebdriverIO - WebDriver bindings for Node.js
     url: http://webdriver.io
-    description: A Node.js bindings implementation for the W3C Webdriver protocol.
+    description: A Node.js bindings implementation for the W3C WebDriver protocol.
     type: website
 
 # Writing
