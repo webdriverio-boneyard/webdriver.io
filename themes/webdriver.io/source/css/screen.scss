@@ -52,6 +52,7 @@ html,body {
 
 .runyourtests {
     float: right;
+    position: relative;
 
     > div > p > a {
         font-size: 0;
@@ -71,6 +72,24 @@ html,body {
 
     figure.highlight {
         margin: 0!important;
+    }
+
+    a.tryit {
+        position: absolute;
+        display: block;
+        top: 0;
+        right: 0;
+        float: none;
+        clear: both;
+        margin: 0;
+        border-radius: 0;
+        padding: 10px 15px;
+
+        &:before {
+            float: right;
+            margin-left: 10px;
+            transform: rotate(-45deg);
+        }
     }
 }
 img[alt="TestingBot"] {
