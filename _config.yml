@@ -101,14 +101,14 @@ wdio:
     - apiVersion: v3.4
       webdriverio: 3.4.0
       wddoc: v0.3.2
-    - apiVersion: v4.7
-      webdriverio: 4.7.1
+    - apiVersion: v4.11
+      webdriverio: 4.11.0
       wddoc: v0.4.1
-    - apiVersion: v4.8
-      webdriverio: 4.8.0
+    - apiVersion: v4.12
+      webdriverio: 4.12.0
       wddoc: v0.4.1
-    - apiVersion: v4.9
-      webdriverio: 4.9.11
+    - apiVersion: v4.13
+      webdriverio: 4.13.0
       wddoc: v0.4.1
 
 marked:
